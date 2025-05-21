@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "4gTlx13Ye6s=",
+  "success": true,
+  "projectFilePath": "D:\\UNI\\DevOps-Module\\API\\EventManagement\\EventManagement.Web\\EventManagement.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\sonaranalyzer.csharp\\10.10.0.116381\\sonaranalyzer.csharp.10.10.0.116381.nupkg.sha512"
+  ],
+  "logs": []
+}
