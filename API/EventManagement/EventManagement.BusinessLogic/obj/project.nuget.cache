@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NdZNVa6xxhE=",
+  "success": true,
+  "projectFilePath": "D:\\UNI\\DevOps-Module\\API\\EventManagement\\EventManagement.BusinessLogic\\EventManagement.BusinessLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\sonaranalyzer.csharp\\10.10.0.116381\\sonaranalyzer.csharp.10.10.0.116381.nupkg.sha512"
+  ],
+  "logs": []
+}
