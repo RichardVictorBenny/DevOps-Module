@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventManagement.BusinessLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f70f3d77ca3e44fd475702958189c00fc53d928")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc08698572f3e3e5ba4e47d5c96c3ed0a5a3c587")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventManagement.BusinessLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventManagement.BusinessLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

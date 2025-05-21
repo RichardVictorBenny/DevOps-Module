@@ -92,7 +92,12 @@
           }
         },
         "centralPackageVersions": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.5",
           "Microsoft.AspNetCore.OpenApi": "9.0.5",
+          "Microsoft.EntityFrameworkCore": "9.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.5",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
           "Serilog": "4.3.0",
           "SonarAnalyzer.CSharp": "10.10.0.116381"
