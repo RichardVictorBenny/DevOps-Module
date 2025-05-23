@@ -46,16 +46,16 @@ pipeline {
                     sh 'ls -ltra'
 
                     echo "Restoring .NET dependencies..."
-                    sh 'dotnet restore'
+                    sh 'dotnet restore EventManagement.sln'
 
                     echo "Linting backend code (optional)..."
                     sh 'dotnet format --verify-no-changes' // Optional for code formatting
 
                     echo "Building backend..."
-                    sh 'dotnet build --no-restore'
+                    sh 'dotnet build EventManagement.sln--no-restore'
 
                     echo "Running backend tests..."
-                    // sh 'dotnet test --no-build'
+                    // sh 'dotnet test EventManagement.sln --no-build'
                 }
             }
         }
