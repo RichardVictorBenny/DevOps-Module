@@ -43,6 +43,8 @@ pipeline {
                 dir('API/EventManagement') {
                     sh 'pwd'
 
+                    sh 'ls -ltra'
+
                     echo "Restoring .NET dependencies..."
                     sh 'dotnet restore'
 
