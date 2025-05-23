@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'docker-agent-docker9-node'
+        }
+    }
 
     triggers {
             pollSCM 'H/5 * * * *'
