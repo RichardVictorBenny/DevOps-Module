@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+            pollSCM 'H/5 * * * *'
+        }
+
     stages {
         stage('Checkout') {
             steps {
@@ -8,9 +12,6 @@ pipeline {
             }
         }
 
-        triggers {
-            pollSCM 'H/5 * * * *'
-        }
 
         stage('Frontend Lint & Test') {
             when {
