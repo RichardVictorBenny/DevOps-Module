@@ -1,0 +1,12 @@
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\bin\Debug\net9.0\EventManagement.Shared.deps.json
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\bin\Debug\net9.0\EventManagement.Shared.dll
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\bin\Debug\net9.0\EventManagement.Shared.pdb
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.AssemblyInfoInputs.cache
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.AssemblyInfo.cs
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.csproj.CoreCompileInputs.cache
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.sourcelink.json
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.dll
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\refint\EventManagement.Shared.dll
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\EventManagement.Shared.pdb
+D:\UNI\DevOps-Module\API\EventManagement\EventManagement.Shared\obj\Debug\net9.0\ref\EventManagement.Shared.dll

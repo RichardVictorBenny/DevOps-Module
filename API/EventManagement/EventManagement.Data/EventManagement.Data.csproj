@@ -4,8 +4,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Configurations\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
