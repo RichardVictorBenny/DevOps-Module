@@ -40,7 +40,7 @@ pipeline {
             //     changeset "**/backend/**"
             // }
             steps {
-                dir('backend') {
+                dir('API') {
                     sh 'pwd'
 
                     echo "Restoring .NET dependencies..."
@@ -75,7 +75,7 @@ pipeline {
             //     changeset "**/backend/**"
             // }
             steps {
-                dir('backend') {
+                dir('API') {
                     echo "Rebuilding backend for deployment..."
                     sh 'dotnet publish -c Release -o ./publish'
                 }
