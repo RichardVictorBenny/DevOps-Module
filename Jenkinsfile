@@ -41,7 +41,7 @@ pipeline {
             // }
             steps {
                 dir('backend') {
-                    sh 'ls -ltra'
+                    sh 'pwd'
 
                     echo "Restoring .NET dependencies..."
                     sh 'dotnet restore'
