@@ -33,13 +33,13 @@ pipeline {
             steps {
                 dir('backend') {
                     echo "Restoring .NET dependencies..."
-                    // sh 'dotnet restore'
+                    sh 'dotnet restore'
 
                     echo "Linting backend code (optional)..."
-                    // sh 'dotnet format --verify-no-changes' // Optional for code formatting
+                    sh 'dotnet format --verify-no-changes' // Optional for code formatting
 
                     echo "Building backend..."
-                    // sh 'dotnet build --no-restore'
+                    sh 'dotnet build --no-restore'
 
                     echo "Running backend tests..."
                     // sh 'dotnet test --no-build'
@@ -66,7 +66,7 @@ pipeline {
             steps {
                 dir('backend') {
                     echo "Rebuilding backend for deployment..."
-                    // sh 'dotnet publish -c Release -o ./publish'
+                    sh 'dotnet publish -c Release -o ./publish'
                 }
             }
         }
