@@ -19,7 +19,7 @@ namespace EventManagement.Web.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> GetWeatherData()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
