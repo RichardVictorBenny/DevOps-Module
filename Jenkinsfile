@@ -37,10 +37,10 @@ pipeline {
 
         stage('Backend Lint & Test') {
             // when {
-            //     changeset "**/backend/**"
+            //     changeset "**/API/**"
             // }
             steps {
-                dir('API') {
+                dir('API/EventManagement') {
                     sh 'pwd'
 
                     echo "Restoring .NET dependencies..."
@@ -75,7 +75,7 @@ pipeline {
             //     changeset "**/backend/**"
             // }
             steps {
-                dir('API') {
+                dir('API/EventManagement') {
                     echo "Rebuilding backend for deployment..."
                     sh 'dotnet publish -c Release -o ./publish'
                 }
