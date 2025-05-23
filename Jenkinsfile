@@ -8,6 +8,10 @@ pipeline {
             }
         }
 
+        triggers {
+            pollSCM 'H/5 * * * *'
+        }
+
         stage('Frontend Lint & Test') {
             when {
                 changeset "**/frontend/**"
