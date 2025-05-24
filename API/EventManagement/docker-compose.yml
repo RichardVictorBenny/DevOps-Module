@@ -1,6 +1,0 @@
-services:
-  eventmanagement.web:
-    image: ${DOCKER_REGISTRY-}eventmanagementweb
-    build:
-      context: .
-      dockerfile: EventManagement.Web/Dockerfile

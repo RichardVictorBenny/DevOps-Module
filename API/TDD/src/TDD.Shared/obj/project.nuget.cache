@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iAWTIVSrpP4=",
+  "success": true,
+  "projectFilePath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\bin\Debug\net9.0\TDD.Shared.deps.json
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\bin\Debug\net9.0\TDD.Shared.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\bin\Debug\net9.0\TDD.Shared.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.AssemblyInfoInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.AssemblyInfo.cs
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.csproj.CoreCompileInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\refint\TDD.Shared.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\ref\TDD.Shared.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Shared\obj\Debug\net9.0\TDD.Shared.csproj.AssemblyReference.cache

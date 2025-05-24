@@ -1,0 +1,14 @@
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\bin\Debug\net9.0\TDD.Infrastructure.deps.json
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\bin\Debug\net9.0\TDD.Infrastructure.runtimeconfig.json
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\bin\Debug\net9.0\TDD.Infrastructure.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\bin\Debug\net9.0\TDD.Infrastructure.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.csproj.AssemblyReference.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.AssemblyInfoInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.AssemblyInfo.cs
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\refint\TDD.Infrastructure.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\TDD.Infrastructure.genruntimeconfig.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Infrastrcture\obj\Debug\net9.0\ref\TDD.Infrastructure.dll

@@ -1,0 +1,17 @@
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.BusinessLogic.deps.json
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.BusinessLogic.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.BusinessLogic.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.AssemblyInfoInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.AssemblyInfo.cs
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\refint\TDD.BusinessLogic.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\ref\TDD.BusinessLogic.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.Shared.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.Shared.pdb
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.BusinessLogic.csproj.AssemblyReference.cache
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\obj\Debug\net9.0\TDD.Busi.CCCAABEF.Up2Date
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.Infrastructure.dll
+D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.BusinessLogic\bin\Debug\net9.0\TDD.Infrastructure.pdb
