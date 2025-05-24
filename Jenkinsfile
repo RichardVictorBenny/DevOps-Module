@@ -47,7 +47,7 @@ pipeline {
 
                     echo "Restoring .NET dependencies..."
                     sh 'cd EventManagement.Web'
-                    sh 'dotnet restore'
+                    sh 'dotnet restore EventManagement.Web.csproj'
                     sh 'cd ../..'
                     // sh 'dotnet restore --project EventManagement.Web/EventManagement.Web.csproj'
 
