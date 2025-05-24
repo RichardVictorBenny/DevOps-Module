@@ -8,8 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{205E885C-2A3B-4AE8-A297-21AB11C03354}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		Directory.Build.Props = Directory.Build.Props
-		Directory.Packages.Props = Directory.Packages.Props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.BusinessLogic", "EventManagement.BusinessLogic\EventManagement.BusinessLogic.csproj", "{94B0655C-0D94-47D3-AF10-1E4962083AE2}"
