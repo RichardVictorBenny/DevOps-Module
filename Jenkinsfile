@@ -40,7 +40,7 @@ pipeline {
             //     changeset "**/API/**"
             // }
             steps {
-                dir('API/EventManagement') {
+                dir('API/EventManagement/EventManagement.Web') {
                     sh 'pwd'
 
                     sh 'ls -ltra'
