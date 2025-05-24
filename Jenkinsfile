@@ -40,8 +40,9 @@ pipeline {
             //     changeset "**/API/**"
             // }
             steps {
-                dir('API/EventManagement/EventManagement.Web') {
+                dir('API/TDD') {
 
+                    sh 'ls -ltra'
                     echo "Restoring .NET dependencies..."
                 
                     sh 'dotnet restore'
