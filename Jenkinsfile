@@ -46,7 +46,7 @@ pipeline {
                     sh 'ls -ltra'
 
                     echo "Restoring .NET dependencies..."
-                    sh 'dotnet restore ./EventManagement.Web/EventManagement.Web.csproj'
+                    sh 'dotnet restore EventManagement.sln'
 
                     echo "Linting backend code (optional)..."
                     sh 'dotnet format --verify-no-changes' // Optional for code formatting
