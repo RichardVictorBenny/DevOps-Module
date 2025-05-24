@@ -77,7 +77,7 @@ pipeline {
             //     changeset "**/backend/**"
             // }
             steps {
-                dir('API/EventManagement/EventManagement.Web') {
+                dir('API/TDD') {
                     echo "Rebuilding backend for deployment..."
                     sh 'dotnet publish -c Release -o ./publish'
                 }
