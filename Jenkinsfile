@@ -46,8 +46,8 @@ pipeline {
                     sh 'ls -ltra'
 
                     echo "Restoring .NET dependencies..."
-                    sh 'cd EventManagement.Web'
-                    sh 'ls -ltra'
+                    sh 'cd EventManagement.Web && ls -ltra'
+                    sh 'pwd'
                     sh 'dotnet restore EventManagement.Web.csproj'
                     sh 'cd ../..'
                     // sh 'dotnet restore --project EventManagement.Web/EventManagement.Web.csproj'
