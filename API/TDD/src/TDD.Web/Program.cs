@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using TDD.BusinessLogic;
-using TDD.Infrastrcture.Data;
 using TDD.Infrastructure;
 using TDD.Shared;
+using TDD.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,9 +21,15 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<DataContext>()
     .AddDefaultTokenProviders();
 
-
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 // Configure the HTTP request pipeline.
 

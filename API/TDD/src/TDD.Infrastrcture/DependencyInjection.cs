@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TDD.Infrastrcture.Data;
-using TDD.Infrastrcture.Data.Interfaces;
+using TDD.Infrastructure.Data;
+using TDD.Infrastructure.Data.Interfaces;
 
 namespace TDD.Infrastructure
 {

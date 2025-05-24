@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TDD.Infrastrcture.Data.Interfaces;
+using TDD.Infrastructure.Data.Interfaces;
 
-namespace TDD.Infrastrcture.Data
+namespace TDD.Infrastructure.Data
 {
     public class DataContext : IdentityDbContext, IDataContext
     {

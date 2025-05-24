@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDD.Infrastrcture.Data.Interfaces
+namespace TDD.Infrastructure.Data.Interfaces
 {
     public interface IDataContext
     {
