@@ -41,19 +41,12 @@ pipeline {
             // }
             steps {
                 dir('API/TDD') {
-
-                    sh 'ls -ltra'
                     echo "Restoring .NET dependencies..."
-                
                     sh 'dotnet restore'
-                    // sh 'dotnet restore --project EventManagement.Web/EventManagement.Web.csproj'
-
                     echo "Linting backend code (optional)..."
-                    // sh 'dotnet format  --verify-no-changes' // Optional for code formatting
-
+                    // sh 'dotnet format  --verify-no-changes'
                     echo "Building backend..."
                     sh 'dotnet build --no-restore'
-
                     echo "Running backend tests..."
                     // sh 'dotnet test --project EventManagement.Web/EventManagement.Web.csproj --no-build'
                 }
