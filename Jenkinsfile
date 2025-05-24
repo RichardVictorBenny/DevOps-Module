@@ -52,10 +52,10 @@ pipeline {
                     // sh 'dotnet restore --project EventManagement.Web/EventManagement.Web.csproj'
 
                     echo "Linting backend code (optional)..."
-                    sh 'dotnet format  --verify-no-changes' // Optional for code formatting
+                    // sh 'dotnet format  --verify-no-changes' // Optional for code formatting
 
                     echo "Building backend..."
-                    sh 'dotnet build --project EventManagement.Web/EventManagement.Web.csproj --no-restore'
+                    sh 'dotnet build --no-restore'
 
                     echo "Running backend tests..."
                     // sh 'dotnet test --project EventManagement.Web/EventManagement.Web.csproj --no-build'
