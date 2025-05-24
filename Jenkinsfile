@@ -40,15 +40,14 @@ pipeline {
             //     changeset "**/API/**"
             // }
             steps {
-                dir('API/EventManagement') {
+                dir('API/EventManagement/EventManagement.Web') {
                     sh 'pwd'
 
                     sh 'ls -ltra'
 
                     echo "Restoring .NET dependencies..."
-                    sh 'cd EventManagement.Web && ls -ltra'
-                    sh 'pwd'
-                    sh 'dotnet restore EventManagement.Web.csproj'
+                
+                    sh 'dotnet restore'
                     sh 'cd ../..'
                     // sh 'dotnet restore --project EventManagement.Web/EventManagement.Web.csproj'
 
