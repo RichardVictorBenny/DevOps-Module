@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj": {}
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj": {
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
+        "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
         "projectName": "TDD.Shared.Tests",
-        "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
+        "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\obj\\",
+        "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

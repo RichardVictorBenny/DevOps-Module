@@ -949,11 +949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj",
+      "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj",
       "projectName": "TDD.Web.Tests",
-      "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj",
+      "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Web.Tests\\obj\\",
+      "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

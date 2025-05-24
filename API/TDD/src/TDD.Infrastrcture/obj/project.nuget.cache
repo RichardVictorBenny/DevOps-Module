@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZvDU4jaQ2Mw=",
+  "dgSpecHash": "+/mUEw2EIjs=",
   "success": true,
-  "projectFilePath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
+  "projectFilePath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

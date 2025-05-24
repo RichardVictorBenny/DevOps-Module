@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {}
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {}
   },
   "projects": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+        "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
         "projectName": "TDD.Shared",
-        "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+        "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\obj\\",
+        "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

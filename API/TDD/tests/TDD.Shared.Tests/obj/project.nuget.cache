@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZCopfTgtSQ=",
+  "dgSpecHash": "tAx8LdAasdo=",
   "success": true,
-  "projectFilePath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
+  "projectFilePath": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Shared.Tests\\TDD.Shared.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",

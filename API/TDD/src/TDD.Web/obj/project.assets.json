@@ -5007,11 +5007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Web\\TDD.Web.csproj",
+      "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\TDD.Web.csproj",
       "projectName": "TDD.Web",
-      "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Web\\TDD.Web.csproj",
+      "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\TDD.Web.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Web\\obj\\",
+      "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5032,11 +5032,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {
-              "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj"
+            "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {
+              "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj"
             },
-            "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
-              "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj"
+            "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
+              "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iAWTIVSrpP4=",
+  "dgSpecHash": "k+yQ/dS8p9g=",
   "success": true,
-  "projectFilePath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+  "projectFilePath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.5\\microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512"
   ],

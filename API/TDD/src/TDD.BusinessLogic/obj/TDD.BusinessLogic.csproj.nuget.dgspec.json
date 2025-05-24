@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {}
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {}
   },
   "projects": {
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj",
+        "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj",
         "projectName": "TDD.BusinessLogic",
-        "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj",
+        "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.BusinessLogic\\obj\\",
+        "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj": {
-                "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj"
+              "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj": {
+                "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj"
               },
-              "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
-                "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj"
+              "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
+                "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj": {
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
+        "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
         "projectName": "TDD.Infrastructure",
-        "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
+        "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Infrastrcture\\obj\\",
+        "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -181,14 +181,14 @@
         }
       }
     },
-    "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
+    "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+        "projectUniqueName": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
         "projectName": "TDD.Shared",
-        "projectPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
+        "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Richard\\Studing\\C#\\LiteCleanArchitecture\\TDD\\src\\TDD.Shared\\obj\\",
+        "outputPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
