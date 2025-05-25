@@ -34,5 +34,12 @@ namespace TDD.Web.Controllers
 
             return Ok("Registration successful");
         }
+
+        [HttpPost("Refresh", Name = "Refresh")]
+        public async Task<IResult> Refresh(string refreshToken)
+        {
+            var result = await translator.Refresh(refreshToken);
+            return result;
+        }
     }
 }

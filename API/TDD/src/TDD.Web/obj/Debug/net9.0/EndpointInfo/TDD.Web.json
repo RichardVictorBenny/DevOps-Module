@@ -69,6 +69,28 @@
         }
       }
     },
+    "/api/Authentication/Refresh": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "Refresh",
+        "parameters": [
+          {
+            "name": "refreshToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [

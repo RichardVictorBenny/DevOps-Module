@@ -64,7 +64,7 @@ namespace TDD.BusinessLogic.Services
             }
 
             user.RefreshToken = randomRefreshToken;
-            user.RefreshTokenExpiry = DateTime.UtcNow.AddHours(24);
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddHours(24); 
             await userManager.UpdateAsync(user);
 
 

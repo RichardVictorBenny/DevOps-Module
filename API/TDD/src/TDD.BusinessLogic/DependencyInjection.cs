@@ -15,6 +15,7 @@ namespace TDD.BusinessLogic
         {
 
             services.AddTransient<IAuthService, AuthService>(); 
+            services.AddTransient<IUserService, UserService>();
 
             return services;
         }

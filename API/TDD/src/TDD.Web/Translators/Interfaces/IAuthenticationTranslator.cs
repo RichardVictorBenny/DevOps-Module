@@ -7,6 +7,7 @@ namespace TDD.Web.Translators.Interfaces
     public interface IAuthenticationTranslator
     {
         Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login(LoginViewModel viewModel);
+        Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(string refreshToken);
         Task<bool> Register(RegisterViewModel viewModel);
     }
 }

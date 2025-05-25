@@ -23,19 +23,6 @@ namespace TDD.Web.Tests.Translators
         [Test]
         public void RegisterErrorWithoutViewMode()
         {
-            var store = new Mock<IUserStore<ApplicationUser>>();
-
-            var userManager = new Mock<UserManager<ApplicationUser>>(
-                store.Object,
-                null, 
-                null, 
-                new IUserValidator<ApplicationUser>[0],
-                new IPasswordValidator<ApplicationUser>[0],
-                null, 
-                null, 
-                null, 
-                null 
-            ).Object;
 
             var authSettings = new Mock<IAuthService>().Object;
             var jwtSettings = Options.Create(new JwtSettings {
@@ -44,9 +31,10 @@ namespace TDD.Web.Tests.Translators
                 Audience = "test-audience"
             });
             var dataProtector = new Mock<IDataProtectionProvider>().Object;
+            var userService = new Mock<IUserService>().Object;
 
 
-            var translator = new AuthenticationTranslator(authSettings, jwtSettings,userManager, dataProtector);
+            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
 
 
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => { await translator.Register(null); });
@@ -76,19 +64,6 @@ namespace TDD.Web.Tests.Translators
         [Test]
         public void LoginErrorsWithoutViewModel()
         {
-            var store = new Mock<IUserStore<ApplicationUser>>();
-
-            var userManager = new Mock<UserManager<ApplicationUser>>(
-                store.Object,
-                null,
-                null,
-                new IUserValidator<ApplicationUser>[0],
-                new IPasswordValidator<ApplicationUser>[0],
-                null,
-                null,
-                null,
-                null
-            ).Object;
 
             var authSettings = new Mock<IAuthService>().Object;
             var jwtSettings = Options.Create(new JwtSettings
@@ -98,9 +73,10 @@ namespace TDD.Web.Tests.Translators
                 Audience = "test-audience"
             });
             var dataProtector = new Mock<IDataProtectionProvider>().Object;
+            var userService = new Mock<IUserService>().Object;
 
 
-            var translator = new AuthenticationTranslator(authSettings, jwtSettings, userManager, dataProtector);
+            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
 
 
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => { await translator.Login(null); });

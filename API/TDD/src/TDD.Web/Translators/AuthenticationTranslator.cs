@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using TDD.BusinessLogic.Models;
 using TDD.BusinessLogic.Services.Interfaces;
@@ -22,16 +24,16 @@ namespace TDD.Web.Translators
     public class AuthenticationTranslator : IAuthenticationTranslator
     {
         private readonly IAuthService authService;
-        private readonly UserManager<ApplicationUser> userManager;
         private readonly IDataProtectionProvider dataProtection;
+        private readonly IUserService userService;
         private readonly JwtSettings jwtSettings;
 
 
-        public AuthenticationTranslator(IAuthService authService, IOptions<JwtSettings> settings, UserManager<ApplicationUser> userManager, IDataProtectionProvider dataProtection)
+        public AuthenticationTranslator(IAuthService authService, IOptions<JwtSettings> settings, IDataProtectionProvider dataProtection, IUserService userService)
         {
             this.authService = authService ?? throw new ArgumentNullException(nameof(authService));
-            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.dataProtection = dataProtection ?? throw new ArgumentNullException(nameof(dataProtection));
+            this.userService = userService;
             this.jwtSettings = settings.Value ?? throw new ArgumentNullException(nameof(jwtSettings));
         }
         public async Task<bool> Register(RegisterViewModel viewModel)
@@ -53,7 +55,7 @@ namespace TDD.Web.Translators
                 return TypedResults.Problem("Unauthorized", statusCode: StatusCodes.Status401Unauthorized);
             }
 
-            var user = await this.userManager.FindByEmailAsync(model.UserName);
+            var user = await this.userService.FindByEmailAsync(model.UserName);
 
             var tokenString = this.authService.GenerateTokenString(user);
             var refreshToken = await this.authService.GenerateRefreshTokenString(user);
@@ -68,6 +70,42 @@ namespace TDD.Web.Translators
             };
             return TypedResults.Ok(value: accessTokenResponse);
         }
+
+            public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(string refreshToken)
+            {
+                var protector = dataProtection.CreateProtector("RefreshToken");
+                string rawRefreshToken;
+                try
+                {
+                    rawRefreshToken = protector.Unprotect(refreshToken);
+                }
+                catch (CryptographicException)
+                {
+                    return TypedResults.Problem("Invalid refresh token", statusCode: StatusCodes.Status400BadRequest);
+                }
+
+                var user = await this.userService.GetUserFromRefreshToken(rawRefreshToken);
+
+
+                if (user == null || user.RefreshTokenExpiry!.Value < DateTime.UtcNow)
+                {
+                    return TypedResults.Problem("Expired refresh token", statusCode: StatusCodes.Status400BadRequest);
+                }
+
+                //check for active user
+
+                var tokenString = this.authService.GenerateTokenString(user);
+                var newRefreshToken = await this.authService.GenerateRefreshTokenString(user);
+                var protectedRefreshToken = protector.Protect(refreshToken);
+
+                var accessTokenResponse = new AccessTokenResponse
+                {
+                    AccessToken = tokenString,
+                    ExpiresIn = 3600,
+                    RefreshToken = protectedRefreshToken
+                };
+                return TypedResults.Ok(value: accessTokenResponse);
+            }
 
         private LoginModel Map(LoginViewModel model)
         {

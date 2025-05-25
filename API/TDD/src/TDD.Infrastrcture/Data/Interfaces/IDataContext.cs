@@ -12,5 +12,6 @@ namespace TDD.Infrastructure.Data.Interfaces
 
     {
         DbSet<ApplicationUser> Users { get; }
+
     }
 }
