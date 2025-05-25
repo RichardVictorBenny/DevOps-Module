@@ -48,7 +48,7 @@ pipeline {
                     echo "Building backend..."
                     sh 'dotnet build --no-restore'
                     echo "Running backend tests..."
-                    // sh 'dotnet test --project EventManagement.Web/EventManagement.Web.csproj --no-build'
+                    sh 'dotnet test --no-build'
                 }
             }
         }

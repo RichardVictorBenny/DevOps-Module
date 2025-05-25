@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TDD.Web.Controllers;
+using TDD.Web.Translators.Interfaces;
+
+namespace TDD.Web.Tests.Controllers
+{
+    public class AuthenticationControllerTests
+    {
+
+        #region ControllerTesting
+        [Test]
+        public void CannotCreateWithoutTranslator()
+        {
+            IAuthenticationTranslator translator = null;
+
+            var ex = Assert.Throws<ArgumentNullException>(() =>
+            {
+                _ = new AuthenticationController(translator);
+            });
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex?.ParamName, Is.EqualTo("translator"));
+            });
+        }
+        #endregion
+    }
+}

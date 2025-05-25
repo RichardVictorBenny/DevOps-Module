@@ -181,6 +181,7 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\TDD.Web.pdb
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Azure.Core.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Azure.Identity.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Humanizer.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

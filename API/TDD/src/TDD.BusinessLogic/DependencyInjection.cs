@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TDD.BusinessLogic.Services;
+using TDD.BusinessLogic.Services.Interfaces;
 
 namespace TDD.BusinessLogic
 {
@@ -11,6 +13,8 @@ namespace TDD.BusinessLogic
     {
         public static IServiceCollection AddBusinessLogic(this IServiceCollection services)
         {
+
+            services.AddTransient<IAuthService, AuthService>(); 
 
             return services;
         }
