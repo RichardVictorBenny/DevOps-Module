@@ -9,7 +9,7 @@ namespace TDD.BusinessLogic.Services.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> Register(LoginModel model);
+        Task<bool> Register(RegisterModel model);
 
         Task<bool> Login(LoginModel model);
         string GenerateTokenString(LoginModel user);

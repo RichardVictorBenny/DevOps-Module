@@ -10,26 +10,29 @@ using System.Text;
 using System.Threading.Tasks;
 using TDD.BusinessLogic.Models;
 using TDD.BusinessLogic.Services.Interfaces;
+using TDD.Infrastructure.Data.Entities;
 using TDD.Shared.Options;
 
 namespace TDD.BusinessLogic.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly JwtSettings jwtSettings;
 
-        public AuthService(UserManager<IdentityUser> userManager, IOptions<JwtSettings> settings)
+        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> settings)
         {
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.jwtSettings = settings.Value ?? throw new ArgumentNullException(nameof(settings));
         }
-        public async Task<bool> Register(LoginModel model)
+        public async Task<bool> Register(RegisterModel model)
         {
-            var identityUser = new IdentityUser
+            var identityUser = new ApplicationUser
             {
                 UserName = model.UserName,
-                Email = model.UserName
+                Email = model.UserName,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
             };
 
             var result = await userManager.CreateAsync(identityUser, model.Password);

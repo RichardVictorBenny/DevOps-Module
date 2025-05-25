@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TDD.Web;
 using TDD.Shared.Options;
+using TDD.Infrastructure.Data.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -54,7 +55,7 @@ builder.Services
     .AddWeb();
 
 //adding identity 
-builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
     .AddEntityFrameworkStores<DataContext>()
     .AddDefaultTokenProviders();
 

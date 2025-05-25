@@ -24,7 +24,7 @@ namespace TDD.Web.Controllers
         }
 
         [HttpPost("Register", Name = "RegisterUser")]
-        public async Task<IActionResult> Register(LoginViewModel model)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var result = await translator.Register(model);
             if (!result)

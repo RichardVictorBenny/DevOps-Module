@@ -25,7 +25,7 @@ namespace TDD.Web.Translators
             this.authService = authService ?? throw new ArgumentNullException(nameof(authService));
             this.jwtSettings = settings.Value ?? throw new ArgumentNullException(nameof(jwtSettings));
         }
-        public async Task<bool> Register(LoginViewModel viewModel)
+        public async Task<bool> Register(RegisterViewModel viewModel)
         {
             var model = Map(viewModel);
             return await this.authService.Register(model);
@@ -59,6 +59,17 @@ namespace TDD.Web.Translators
                 Password = model.Password,
             };
 
+        }
+
+        private RegisterModel Map(RegisterViewModel model)
+        {
+            return new RegisterModel
+            {
+                UserName = model.UserName,
+                Password = model.Password,
+                FirstName = model.FirstName,
+                LastName = model.LastName
+            };
         }
 
     }

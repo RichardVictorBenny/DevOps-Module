@@ -1,5 +1,11 @@
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_TDD.Web.Tests
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\CoverletSourceRootsMapping_TDD.Web.Tests
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.csproj.AssemblyReference.cache
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.AssemblyInfoInputs.cache
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.AssemblyInfo.cs
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.csproj.CoreCompileInputs.cache
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.sourcelink.json
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\testhost.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.Web.deps.json
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.Web.runtimeconfig.json
@@ -162,12 +168,6 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.Web.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.BusinessLogic.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.Infrastructure.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\TDD.Shared.pdb
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.csproj.AssemblyReference.cache
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.GeneratedMSBuildEditorConfig.editorconfig
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.AssemblyInfoInputs.cache
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.AssemblyInfo.cs
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.csproj.CoreCompileInputs.cache
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.sourcelink.json
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web..DC6412B5.Up2Date
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\TDD.Web.Tests.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\obj\Debug\net9.0\refint\TDD.Web.Tests.dll

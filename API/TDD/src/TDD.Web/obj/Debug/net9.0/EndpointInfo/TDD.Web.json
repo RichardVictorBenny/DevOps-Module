@@ -47,17 +47,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginViewModel"
+                "$ref": "#/components/schemas/RegisterViewModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginViewModel"
+                "$ref": "#/components/schemas/RegisterViewModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginViewModel"
+                "$ref": "#/components/schemas/RegisterViewModel"
               }
             }
           }
@@ -122,6 +122,34 @@
             "type": "string"
           },
           "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterViewModel": {
+        "required": [
+          "firstName",
+          "lastName",
+          "password",
+          "userName"
+        ],
+        "type": "object",
+        "properties": {
+          "userName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "firstName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastName": {
             "minLength": 1,
             "type": "string"
           }
