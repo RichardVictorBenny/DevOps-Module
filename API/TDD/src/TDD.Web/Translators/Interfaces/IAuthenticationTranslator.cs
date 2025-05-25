@@ -1,10 +1,12 @@
-﻿using TDD.Web.ViewModels;
+﻿using Microsoft.AspNetCore.Authentication.BearerToken;
+using Microsoft.AspNetCore.Http.HttpResults;
+using TDD.Web.ViewModels;
 
 namespace TDD.Web.Translators.Interfaces
 {
     public interface IAuthenticationTranslator
     {
-        Task<bool> Login(LoginViewModel viewModel);
+        Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login(LoginViewModel viewModel);
         Task<bool> Register(LoginViewModel viewModel);
     }
 }

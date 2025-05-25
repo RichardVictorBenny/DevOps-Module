@@ -12,5 +12,6 @@ namespace TDD.BusinessLogic.Services.Interfaces
         Task<bool> Register(LoginModel model);
 
         Task<bool> Login(LoginModel model);
+        string GenerateTokenString(LoginModel user);
     }
 }

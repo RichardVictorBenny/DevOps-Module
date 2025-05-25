@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TDD.Web;
+using TDD.Shared.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -27,6 +28,8 @@ builder.Services.AddAuthentication(x =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JwtSettings:Key"]!)),
         ValidateIssuer = true,
         ValidateAudience = true,
+        ValidateActor = true,
+        RequireExpirationTime = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true
     };
@@ -39,6 +42,9 @@ builder.Services.AddAuthorization();
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+//making jwtavailable
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 
 //Adding DI
 builder.Services
