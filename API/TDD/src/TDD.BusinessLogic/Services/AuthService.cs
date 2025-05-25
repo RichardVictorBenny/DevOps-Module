@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using TDD.BusinessLogic.Models;
@@ -52,8 +53,27 @@ namespace TDD.BusinessLogic.Services
 
         }
 
-        public string GenerateTokenString(LoginModel user)
+        public async Task<string> GenerateRefreshTokenString(ApplicationUser user)
         {
+            string randomRefreshToken = null;
+            var randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                randomRefreshToken = Convert.ToBase64String(randomNumber);
+            }
+
+            user.RefreshToken = randomRefreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddHours(24);
+            await userManager.UpdateAsync(user);
+
+
+            return randomRefreshToken;
+        }
+
+        public string GenerateTokenString(ApplicationUser user)
+        {
+
             IEnumerable<Claim> _claims = new List<Claim> {
                 new Claim(ClaimTypes.Email, user.UserName),
                 new Claim(ClaimTypes.Role, "User")
@@ -75,6 +95,7 @@ namespace TDD.BusinessLogic.Services
             return tokenString;
 
         }
+
 
 
     }

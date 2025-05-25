@@ -8,6 +8,7 @@ using TDD.Web.Translators.Interfaces;
 
 namespace TDD.Web.Tests.Controllers
 {
+    [TestFixture]
     public class AuthenticationControllerTests
     {
 

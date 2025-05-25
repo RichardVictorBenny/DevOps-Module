@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TDD.BusinessLogic.Models;
+using TDD.Infrastructure.Data.Entities;
 
 namespace TDD.BusinessLogic.Services.Interfaces
 {
@@ -12,6 +13,7 @@ namespace TDD.BusinessLogic.Services.Interfaces
         Task<bool> Register(RegisterModel model);
 
         Task<bool> Login(LoginModel model);
-        string GenerateTokenString(LoginModel user);
+        string GenerateTokenString(ApplicationUser user);
+        Task<string> GenerateRefreshTokenString(ApplicationUser user);
     }
 }
