@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{43ACC19E-1A8D-4D39-B439-1501026F7AC2}|tests\\TDD.BusinessLogic.Tests\\TDD.BusinessLogic.Tests.csproj|d:\\uni\\devops-module\\api\\tdd\\tests\\tdd.businesslogic.tests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43ACC19E-1A8D-4D39-B439-1501026F7AC2}|tests\\TDD.BusinessLogic.Tests\\TDD.BusinessLogic.Tests.csproj|solutionrelative:tests\\tdd.businesslogic.tests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|d:\\uni\\devops-module\\api\\tdd\\tests\\tdd.web.tests\\translators\\authenticationtranslatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|solutionrelative:tests\\tdd.web.tests\\translators\\authenticationtranslatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\translators\\authenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\translators\\authenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\translators\\interfaces\\iauthenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\translators\\interfaces\\iauthenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|d:\\uni\\devops-module\\api\\tdd\\tests\\tdd.web.tests\\controllers\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|solutionrelative:tests\\tdd.web.tests\\controllers\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.businesslogic\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|solutionrelative:src\\tdd.businesslogic\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,32 +43,16 @@
       "RelativeMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|solutionrelative:src\\tdd.businesslogic\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\translators\\authenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\translators\\authenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.businesslogic\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|solutionrelative:src\\tdd.businesslogic\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|d:\\uni\\devops-module\\api\\tdd\\tests\\tdd.web.tests\\translators\\authenticationtranslatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|solutionrelative:tests\\tdd.web.tests\\translators\\authenticationtranslatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.businesslogic\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39B17077-6D9C-48DB-BC73-C106033ABB4F}|src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj|solutionrelative:src\\tdd.businesslogic\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\translators\\interfaces\\iauthenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\translators\\interfaces\\iauthenticationtranslator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|d:\\uni\\devops-module\\api\\tdd\\tests\\tdd.web.tests\\controllers\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B93B6303-06DE-4E09-B386-C13E04CD7BA1}|tests\\TDD.Web.Tests\\TDD.Web.Tests.csproj|solutionrelative:tests\\tdd.web.tests\\controllers\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{960D3872-CE21-4BB5-B2C4-EBB35DA8F388}|src\\TDD.Shared\\TDD.Shared.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.shared\\options\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "AuthServiceTests.cs",
+              "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
+              "RelativeDocumentMoniker": "tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
+              "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
+              "RelativeToolTip": "tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:47:49.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\Interfaces\\IUserService.cs",
@@ -99,20 +116,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\UserService.cs",
               "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\UserService.cs",
               "RelativeToolTip": "src\\TDD.BusinessLogic\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T21:50:26.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "DataContext.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\DataContext.cs",
@@ -125,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "IDataContext.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Interfaces\\IDataContext.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Interfaces\\IDataContext.cs",
@@ -138,20 +155,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "AuthenticationTranslatorTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
               "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
               "RelativeToolTip": "tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIA4wBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwCUAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T20:12:28.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "AuthenticationControllerTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Controllers\\AuthenticationControllerTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Controllers\\AuthenticationControllerTests.cs",
@@ -164,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Entities\\ApplicationUser.cs",
@@ -177,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Controllers\\AuthenticationController.cs",
@@ -190,20 +207,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "IAuthenticationTranslator.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\Interfaces\\IAuthenticationTranslator.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Translators\\Interfaces\\IAuthenticationTranslator.cs",
               "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\Interfaces\\IAuthenticationTranslator.cs",
               "RelativeToolTip": "src\\TDD.Web\\Translators\\Interfaces\\IAuthenticationTranslator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T13:41:28.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\Interfaces\\IAuthService.cs",
@@ -216,20 +233,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AuthenticationTranslator.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\AuthenticationTranslator.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Translators\\AuthenticationTranslator.cs",
               "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\AuthenticationTranslator.cs",
               "RelativeToolTip": "src\\TDD.Web\\Translators\\AuthenticationTranslator.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAQwFYAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwEsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T13:27:27.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\DependencyInjection.cs",
@@ -242,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\TDD.Web\\appsettings.Development.json",
@@ -255,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\AuthService.cs",
@@ -268,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\DependencyInjection.cs",
@@ -281,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Program.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Program.cs",
@@ -294,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\Options\\JwtSettings.cs",
               "RelativeDocumentMoniker": "src\\TDD.Shared\\Options\\JwtSettings.cs",

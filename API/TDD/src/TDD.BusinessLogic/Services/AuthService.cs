@@ -18,43 +18,47 @@ namespace TDD.BusinessLogic.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<ApplicationUser> userManager;
         private readonly JwtSettings jwtSettings;
+        private readonly IUserService userService;
 
-        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> settings)
+        public AuthService(IUserService userService, IOptions<JwtSettings> settings)
         {
-            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.jwtSettings = settings.Value ?? throw new ArgumentNullException(nameof(settings));
+            this.userService = userService;
         }
         public async Task<bool> Register(RegisterModel model)
         {
+            ArgumentNullException.ThrowIfNull(model);
+
             var identityUser = new ApplicationUser
-            {
+            { 
                 UserName = model.UserName,
                 Email = model.UserName,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
             };
 
-            var result = await userManager.CreateAsync(identityUser, model.Password);
+            var result = await userService.CreateAsync(identityUser, model.Password);
             return result.Succeeded;
         }
 
         public async Task<bool> Login (LoginModel model)
         {
-            var identityUser = await this.userManager.FindByEmailAsync(model.UserName);
+            ArgumentNullException.ThrowIfNull(model);
+            var identityUser = await this.userService.FindByEmailAsync(model.UserName);
             if(identityUser == null)
             {
                 return false;
             }
 
-           return  await this.userManager.CheckPasswordAsync(identityUser, model.Password);
+           return  await this.userService.CheckPasswordAsync(identityUser, model.Password);
 
 
         }
 
         public async Task<string> GenerateRefreshTokenString(ApplicationUser user)
         {
+            ArgumentNullException.ThrowIfNull(user); ;
             string randomRefreshToken = null;
             var randomNumber = new byte[32];
             using (var rng = RandomNumberGenerator.Create())
@@ -65,7 +69,7 @@ namespace TDD.BusinessLogic.Services
 
             user.RefreshToken = randomRefreshToken;
             user.RefreshTokenExpiry = DateTime.UtcNow.AddHours(24); 
-            await userManager.UpdateAsync(user);
+            await userService.UpdateAsync(user);
 
 
             return randomRefreshToken;
@@ -73,7 +77,7 @@ namespace TDD.BusinessLogic.Services
 
         public string GenerateTokenString(ApplicationUser user)
         {
-
+            ArgumentNullException.ThrowIfNull(user);
             IEnumerable<Claim> _claims = new List<Claim> {
                 new Claim(ClaimTypes.Email, user.UserName),
                 new Claim(ClaimTypes.Role, "User")

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.DataProtection;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -49,17 +50,6 @@ namespace TDD.Web.Tests.Translators
 
         #endregion
 
-        #region xx
-        
-        public void Name()
-        {
-            //Arrange
-            //Act
-            //Asset
-        }
-
-        #endregion
-
         #region Login
         [Test]
         public void LoginErrorsWithoutViewModel()
@@ -85,6 +75,38 @@ namespace TDD.Web.Tests.Translators
             {
                 Assert.That(ex, Is.Not.Null);
                 Assert.That(ex?.ParamName, Is.EqualTo("viewModel"));
+            });
+        }
+
+        #endregion
+
+        #region Refresh
+        [Test]
+        public async Task RefreshWithoutRefreshToken()
+        {
+            //Arrange
+            var authSettings = new Mock<IAuthService>().Object;
+            var jwtSettings = Options.Create(new JwtSettings
+            {
+                Key = "test-key",
+                Issuer = "test-issuer",
+                Audience = "test-audience"
+            });
+            var dataProtector = new Mock<IDataProtectionProvider>().Object;
+            var userService = new Mock<IUserService>().Object;
+
+
+            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
+            //Act
+            var ex = Assert.ThrowsAsync<ArgumentNullException>(async () =>
+            {
+                await translator.Refresh(null);
+            });
+            //Asset
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex?.ParamName, Is.EqualTo("refreshToken"));
             });
         }
 

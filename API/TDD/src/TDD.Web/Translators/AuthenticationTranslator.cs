@@ -73,6 +73,7 @@ namespace TDD.Web.Translators
 
             public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(string refreshToken)
             {
+                ArgumentNullException.ThrowIfNull(refreshToken);
                 var protector = dataProtection.CreateProtector("RefreshToken");
                 string rawRefreshToken;
                 try

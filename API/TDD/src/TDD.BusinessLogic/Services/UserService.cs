@@ -32,5 +32,22 @@ namespace TDD.BusinessLogic.Services
             var user = await this.userManager.FindByEmailAsync(email);
             return user;
         }
+
+        public async Task<IdentityResult> CreateAsync(ApplicationUser user, string password)
+        {
+            var result = await this.userManager.CreateAsync(user, password);
+            return result;
+        }
+
+        public async Task<bool> CheckPasswordAsync(ApplicationUser user, string password)
+        {
+            return await this.userManager.CheckPasswordAsync(user, password);
+        }
+
+        public async Task<IdentityResult> UpdateAsync(ApplicationUser user)
+        {
+            return await userManager.UpdateAsync(user);
+        }
+
     }
 }

@@ -282,6 +282,9 @@
             "projectReferences": {
               "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj": {
                 "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\TDD.BusinessLogic.csproj"
+              },
+              "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj": {
+                "projectPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Shared\\TDD.Shared.csproj"
               }
             }
           }
@@ -302,21 +305,37 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.12.0, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[6.0.2, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.9.2, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.8.2, )"
             }
           },
           "imports": [
