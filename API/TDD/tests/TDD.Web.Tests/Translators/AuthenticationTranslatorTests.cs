@@ -82,7 +82,7 @@ namespace TDD.Web.Tests.Translators
 
         #region Refresh
         [Test]
-        public async Task RefreshWithoutRefreshToken()
+        public void RefreshWithoutRefreshToken()
         {
             //Arrange
             var authSettings = new Mock<IAuthService>().Object;
