@@ -201,10 +201,16 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.EntityFramew
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
@@ -342,6 +348,7 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuil
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.TDD.Web.props
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.TDD.Web.props
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.pack.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.csproj.Up2Date
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\refint\TDD.Web.dll

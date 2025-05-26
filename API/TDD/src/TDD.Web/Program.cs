@@ -10,6 +10,7 @@ using System.Text;
 using TDD.Web;
 using TDD.Shared.Options;
 using TDD.Infrastructure.Data.Entities;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -37,6 +38,10 @@ builder.Services.AddAuthentication(x =>
 });
 
 builder.Services.AddAuthorization();
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+
 
 
 

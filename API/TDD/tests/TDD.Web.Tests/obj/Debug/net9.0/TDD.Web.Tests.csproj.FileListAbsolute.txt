@@ -34,9 +34,15 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Enti
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Web.Tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll

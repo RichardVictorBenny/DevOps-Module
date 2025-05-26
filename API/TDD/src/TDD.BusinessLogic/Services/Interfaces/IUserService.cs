@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 using TDD.Infrastructure.Data.Entities;
 
 namespace TDD.BusinessLogic.Services.Interfaces
@@ -10,5 +11,6 @@ namespace TDD.BusinessLogic.Services.Interfaces
         Task<ApplicationUser> FindByEmailAsync(string email);
         Task<ApplicationUser> GetUserFromRefreshToken(string refreshToken);
         Task<IdentityResult> UpdateAsync(ApplicationUser user);
+        Task<ApplicationUser> GetUserAsync(ClaimsPrincipal user);
     }
 }

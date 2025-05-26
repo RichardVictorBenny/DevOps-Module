@@ -2,6 +2,8 @@
 
 using System.Net.Security;
 using TDD.Shared.Options;
+using TDD.Shared.Providers;
+using TDD.Web.Providers;
 using TDD.Web.Translators;
 using TDD.Web.Translators.Interfaces;
 
@@ -11,9 +13,9 @@ namespace TDD.Web
     {
         public static IServiceCollection AddWeb(this IServiceCollection services)
         {
-            services.AddTransient<IAuthenticationTranslator, AuthenticationTranslator>();
-
-            services.AddTransient<JwtSettings>();
+            services.AddScoped<IAuthenticationTranslator, AuthenticationTranslator>();
+            services.AddScoped<IUserProvider, UserProvider>();
+            services.AddScoped<JwtSettings>();
 
             return services;
         }

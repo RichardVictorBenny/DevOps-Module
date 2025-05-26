@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ using TDD.Infrastructure.Data.Interfaces;
 
 namespace TDD.Infrastructure.Data
 {
-    public class DataContext : IdentityDbContext<ApplicationUser>, IDataContext
+    public class DataContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid >, IDataContext
     {
-        public DataContext(DbContextOptions<DataContext> option): base(option) { }
+        public DataContext(DbContextOptions option): base(option) { }
 
     }
 }

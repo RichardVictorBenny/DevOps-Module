@@ -14,8 +14,8 @@ namespace TDD.BusinessLogic
         public static IServiceCollection AddBusinessLogic(this IServiceCollection services)
         {
 
-            services.AddTransient<IAuthService, AuthService>(); 
-            services.AddTransient<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>(); 
+            services.AddScoped<IUserService, UserService>();
 
             return services;
         }

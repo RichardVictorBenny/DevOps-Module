@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using TDD.BusinessLogic.Services.Interfaces;
@@ -49,5 +50,9 @@ namespace TDD.BusinessLogic.Services
             return await userManager.UpdateAsync(user);
         }
 
+        public async Task<ApplicationUser> GetUserAsync(ClaimsPrincipal user)
+        {
+            return await userManager.GetUserAsync(user);
+        }
     }
 }
