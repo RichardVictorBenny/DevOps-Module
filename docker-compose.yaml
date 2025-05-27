@@ -14,6 +14,24 @@ services:
     volumes:
       - sql_data:/var/opt/mssql
 
+  api:
+    build:
+      context: ./API/TDD/
+      dockerfile: Dockerfile
+    container_name: sql_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__sqlDatabase=Server=sql_server;Database=TDD;User Id=sa;Password=STRONG@password91;TrustServerCertificate=True;MultipleActiveResultSets=True;
+    ports:
+      - "5000:8080"   
+      - "5443:8081" 
+
+    depends_on:
+      - sqlServer
+    networks:
+      - sql_network
+
+
 volumes:
   sql_data:
     driver: local
