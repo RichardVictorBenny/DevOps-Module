@@ -71,7 +71,7 @@ namespace TDD.BusinessLogic.Tests.Services
             _mockTaskSet.Setup(x => x.AddAsync(It.IsAny<TaskItem>(), default))
                 .ReturnsAsync((TaskItem t, CancellationToken _) => {
                     t.Id = expectedTaskId;
-                    return Mock.Of<EntityEntry<TaskItem>>();
+                    return null;
                 });
 
             _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);

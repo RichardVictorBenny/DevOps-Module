@@ -21,7 +21,7 @@ namespace TDD.Infrastructure.Data.Entities
         public DateTime CreatedDate { get; set; }
         public Guid CreatedBy { get; set; }
         public DateTime LastModifiedDate { get; set; }
-        public DateTime LastModifiedBy { get; set; }
+        public Guid LastModifiedBy { get; set; }
         public ApplicationUser User { get; set; }
             
     }
