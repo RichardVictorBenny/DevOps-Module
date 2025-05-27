@@ -1,0 +1,303 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Moq;
+using System;
+using System.Linq.Expressions;
+using TDD.BusinessLogic.Models;
+using TDD.BusinessLogic.Services;
+using TDD.Infrastructure.Data.Entities;
+using TDD.Infrastructure.Data.Interfaces;
+using TDD.Shared.Providers;
+
+namespace TDD.BusinessLogic.Tests.Services
+{
+    [TestFixture]
+    public class TaskItemServiceTests
+    {
+        private Mock<IDataContext> _context;
+        private Mock<IUserProvider> _userProvider;
+        private TaskItemService _taskService;
+        private Mock<DbSet<TaskItem>> _mockTaskSet;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _context = new Mock<IDataContext>();
+            _userProvider = new Mock<IUserProvider>();
+            _taskService = new TaskItemService(_context.Object, _userProvider.Object);
+            _mockTaskSet = new Mock<DbSet<TaskItem>>();
+        }
+
+        #region Create
+        [Test]
+        public void Create_ErrorWithoutTask()
+        {
+            var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => { _ = await _taskService.Create(null); });
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex?.ParamName, Is.EqualTo("task"));
+            });
+        }
+
+        [Test]
+        public void Create_ErrorWithoutSignedInUser()
+        {
+            var task = new TaskModel();
+
+            _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
+
+            var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => { await _taskService.Create(task); });
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex.Message, Is.EqualTo("Cannot create task without Signing In"));
+            });
+        }
+
+        [Test]
+        public async Task Create_ReturnGuidWhenOperationSuccess()
+        {
+            var task = new TaskModel { Title = "Test" };
+            var userId = Guid.NewGuid();
+            var expectedTaskId = Guid.NewGuid();
+
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+
+            _mockTaskSet.Setup(x => x.AddAsync(It.IsAny<TaskItem>(), default))
+                .ReturnsAsync((TaskItem t, CancellationToken _) =>
+                {
+                    t.Id = expectedTaskId;
+                    return new EntityEntry<TaskItem>(null);
+                });
+
+            _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+
+            var result = await _taskService.Create(task);
+
+            Assert.That(result, Is.EqualTo(expectedTaskId));
+            _context.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            _mockTaskSet.Verify(x => x.AddAsync(It.IsAny<TaskItem>(), default), Times.Once);
+
+        }
+        #endregion
+
+        #region GetAll
+        [Test]
+        public void GetAll_ErrorWithoutSignedInUser()
+        {
+            _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
+
+            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.GetAll());
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex.Message, Is.EqualTo("Cannot retrieve tasks without Signing In"));
+            });
+        }
+
+        [Test]
+        public async Task GetAll_ReturnValidTaskModelArray()
+        {
+            var expectedTasks = new List<TaskItem>
+            {
+                new TaskItem { Id = Guid.NewGuid(), Title = "Test1" },
+                new TaskItem { Id = Guid.NewGuid(), Title = "Test2" }
+            };
+            var userId = Guid.NewGuid();
+
+            expectedTasks.ForEach(t => t.CreatedBy = userId);
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+
+            var queryableTasks = expectedTasks.AsQueryable();
+
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Provider).Returns(queryableTasks.Provider);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Expression).Returns(queryableTasks.Expression);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.ElementType).Returns(queryableTasks.ElementType);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.GetEnumerator()).Returns(() => queryableTasks.GetEnumerator());
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+
+            var result = await _taskService.GetAll();
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(result, Is.Not.Null);
+                Assert.That(result.Count(), Is.EqualTo(expectedTasks.Count));
+
+                foreach (var expected in expectedTasks)
+                {
+                    var actual = result.SingleOrDefault(r => r.Id == expected.Id);
+                    Assert.That(actual, Is.Not.Null);
+                    Assert.That(actual.Title, Is.EqualTo(expected.Title));
+                }
+            });
+            
+        }
+        #endregion
+
+        #region GetById
+        [Test]
+        public void GetById_ErrorWithoutValidUser()
+        {
+            _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
+
+            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.GetById(Guid.NewGuid()));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex.Message, Is.EqualTo("Cannot retrieve task without Signing In"));
+            });
+        }
+
+        [Test]
+        public async Task GetById_ReturnValidTaskModel()
+        {
+            var userId = Guid.NewGuid();
+            var expectedTask = new TaskItem
+            {
+                Id = Guid.NewGuid(),
+                Title = "Test",
+                CreatedBy = userId,
+            };
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+            _mockTaskSet.Setup(x => x.FindAsync(It.IsAny<object[]>()))
+                .ReturnsAsync((object[] keyValues) =>
+                {
+                    var id = (Guid)keyValues[0];
+                    return id == expectedTask.Id ? expectedTask : null;
+                });
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+
+            var result = await _taskService.GetById(expectedTask.Id);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(result, Is.Not.Null);
+                Assert.That(result.Id, Is.EqualTo(expectedTask.Id));
+                 _context.Verify(x => x.Tasks, Times.Once);
+            });
+        }
+        #endregion
+
+        #region Update
+        [Test]
+        public void Update_ErrorWithoutSignedInUser()
+        {
+            var updatedTask = new TaskModel
+            {
+                Id = Guid.NewGuid(),
+                Title = "Test Updated",
+            };
+            _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
+
+            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.Update(updatedTask));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex.Message, Is.EqualTo("Cannot update task without Signing In"));
+            });
+        }
+
+        [Test]
+        public async Task Update_ExistingTask_UpdatesPropertiesAndSaves()
+        {
+            var userId = Guid.NewGuid();
+            var taskId = Guid.NewGuid();
+
+            var existingTask = new TaskItem
+            {
+                Id = taskId,
+                Title = "Old Title",
+                CreatedBy = userId
+            };
+
+            var updatedTaskModel = new TaskModel
+            {
+                Id = taskId,
+                Title = "New Title"
+            };
+
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+
+            _mockTaskSet.Setup(x => x.SingleOrDefaultAsync(It.IsAny<Expression<Func<TaskItem, bool>>>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((Expression<Func<TaskItem, bool>> task, CancellationToken _) =>
+                {
+                    return task.Compile()(existingTask) ? existingTask : null;
+                });
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+            _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
+
+            await _taskService.Update(updatedTaskModel);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(existingTask.Title, Is.EqualTo(updatedTaskModel.Title));
+                _mockTaskSet.Verify(x => x.Update(It.IsAny<TaskItem>()), Times.Once);
+                _context.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            });
+        }
+
+        #endregion
+
+        #region Delete
+
+        [Test]
+        public async Task Delete_ErrorWhenNotSignedIn()
+        {
+            var taskId = Guid.NewGuid();
+            _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
+
+            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.Delete(taskId));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(ex, Is.Not.Null);
+                Assert.That(ex.Message, Is.EqualTo("Cannot Delete task without Signing In"));
+            });
+        }
+
+        [Test]
+        public async Task Delete_TaskDeletedSuccessfully()
+        {
+            var taskId = Guid.NewGuid();
+            var userId = Guid.NewGuid();
+
+            var taskItem = new TaskItem
+            {
+                Id = taskId,
+                Title = "Test",
+                CreatedBy = userId,
+            };
+
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+            _mockTaskSet.Setup(x => x.SingleOrDefaultAsync(It.IsAny<Expression<Func<TaskItem, bool>>>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((Expression<Func<TaskItem, bool>> task, CancellationToken _) =>
+                {
+                    return task.Compile()(taskItem) ? taskItem : null;
+                });
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+            _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
+
+            await _taskService.Delete(taskId);
+
+            Assert.Multiple(() =>
+            {
+                _mockTaskSet.Verify(x => x.Remove(It.Is<TaskItem>(t => t.Id == taskId)), Times.Once);
+                _context.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            });
+        }
+        #endregion
+
+    }
+}

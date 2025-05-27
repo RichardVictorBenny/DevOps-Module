@@ -1,6 +1,12 @@
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_TDD.BusinessLogic.Tests
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\CoverletSourceRootsMapping_TDD.BusinessLogic.Tests
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\testhost.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.deps.json
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.runtimeconfig.json
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\appsettings.Development.json
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\appsettings.json
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.staticwebassets.endpoints.json
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.exe
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\testhost.exe
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\NUnit3.TestAdapter.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\NUnit3.TestAdapter.pdb
@@ -16,6 +22,7 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Azur
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Azure.Identity.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Castle.Core.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\FluentAssertions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -51,6 +58,7 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Micr
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.OpenApi.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -61,12 +69,15 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Micr
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Moq.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Moq.EntityFrameworkCore.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Newtonsoft.Json.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\nunit.framework.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\nunit.framework.legacy.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.ClientModel.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.Drawing.Common.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\System.Memory.Data.dll
@@ -146,8 +157,6 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runt
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
@@ -156,8 +165,10 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\runt
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.BusinessLogic.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Infrastructure.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Shared.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.BusinessLogic.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Shared.pdb
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Web.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\TDD.Infrastructure.pdb
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\obj\Debug\net9.0\TDD.BusinessLogic.Tests.csproj.AssemblyReference.cache
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\obj\Debug\net9.0\TDD.BusinessLogic.Tests.GeneratedMSBuildEditorConfig.editorconfig

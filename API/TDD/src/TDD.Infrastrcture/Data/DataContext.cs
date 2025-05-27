@@ -11,9 +11,10 @@ using TDD.Infrastructure.Data.Interfaces;
 
 namespace TDD.Infrastructure.Data
 {
-    public class DataContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid >, IDataContext
+    public class DataContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>, IDataContext
     {
-        public DataContext(DbContextOptions option): base(option) { }
+        public DbSet<TaskItem> Tasks { get; set; }
+        public DataContext(DbContextOptions option) : base(option) { }
 
     }
 }

@@ -37,12 +37,12 @@ namespace TDD.BusinessLogic.Services
             throw new NotImplementedException();
         }
 
-        Task<List<TaskModel>> ITaskItemService.GetAll()
+        public Task<List<TaskModel>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        Task<TaskModel> ITaskItemService.GetById(Guid Id)
+        public Task<TaskModel> GetById(Guid Id)
         {
             throw new NotImplementedException();
         }

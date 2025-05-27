@@ -12,6 +12,8 @@ namespace TDD.Infrastructure.Data.Interfaces
 
     {
         DbSet<ApplicationUser> Users { get; }
+        DbSet<TaskItem> Tasks { get; set; }
 
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
