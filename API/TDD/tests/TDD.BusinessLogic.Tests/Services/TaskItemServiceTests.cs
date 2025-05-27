@@ -117,7 +117,7 @@ public class TaskItemServiceTests
     public async Task GetById_ReturnValidTaskModel()
     {
         var userId = Guid.NewGuid();
-        var task = new TaskItem { Id = Guid.NewGuid(), Title = "TaskX", CreatedBy = userId };
+        var task = new TaskItem { Id = Guid.NewGuid(), Title = "TaskX", UserId = userId };
         await _context.Tasks.AddAsync(task);
         await _context.SaveChangesAsync();
 
@@ -130,12 +130,30 @@ public class TaskItemServiceTests
     }
 
     [Test]
-    public async Task GetById_ReturnsNullWhenTaskNotFound()
+    public async Task GetById_ErrorWhenTaskDoesNotExist()
     {
         _userProvider.Setup(x => x.UserId).Returns(Guid.NewGuid());
-        var result = await _taskService.GetById(Guid.NewGuid());
-        Assert.That(result, Is.Null);
+        var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => { await _taskService.GetById(Guid.NewGuid()); });
+        Assert.That(ex?.Message, Is.EqualTo("Task does not exist"));
     }
+
+    [Test]
+    public async Task GetById_ErrorWhenUserDoesNotOwnTheTaskToBeDeleted()
+    {
+        var userId = Guid.NewGuid();
+        var taskId = Guid.NewGuid();
+        var task = new TaskItem { Id = taskId, Title = "Delete Me", CreatedBy = userId, UserId = userId };
+        var secondaryUserId = Guid.NewGuid();
+
+        await _context.Tasks.AddAsync(task);
+        await _context.SaveChangesAsync();
+
+        _userProvider.Setup(x => x.UserId).Returns(secondaryUserId);
+        var ex = Assert.ThrowsAsync<InvalidOperationException>(() => _taskService.GetById(taskId));
+
+        Assert.That(ex?.Message, Is.EqualTo("Cannot retrieve task of a different user"));
+    }
+
 
     #endregion
 

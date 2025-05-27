@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TDD.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+902ab26226f357d61e0f54b4228d280cb06d9762")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a01b95f6a1c2cfe325607f67e9cfe3cef8ccc73")]
 [assembly: System.Reflection.AssemblyProductAttribute("TDD.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TDD.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

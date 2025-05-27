@@ -137,13 +137,35 @@ namespace TDD.BusinessLogic.Services
             return tasks.ToListAsync();
         }
 
-        public Task<TaskModel> GetById(Guid Id)
+        public async Task<TaskModel> GetById(Guid Id)
         {
             if (userProvider.UserId == Guid.Empty)
             {
                 throw new InvalidOperationException("Cannot retrieve task without Signing In");
             }
             var userId = userProvider.UserId;
+
+            var task = await dataContext.Tasks
+                .SingleOrDefaultAsync(x => x.Id == Id);
+
+            if (task == null)
+            {
+                throw new InvalidOperationException("Task does not exist");
+            }
+            if (task.UserId != userId)
+            {
+                throw new InvalidOperationException("Cannot retrieve task of a different user");
+            }
+
+            return new TaskModel
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description ?? string.Empty,
+                DueDate = task.DueDate,
+                IsFavorite = task.IsFavorite,
+                IsHidden = task.IsHidden
+            };
         }
     }
 }
