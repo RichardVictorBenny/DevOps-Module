@@ -19,7 +19,10 @@ namespace TDD.Infrastructure
             services.AddScoped<IDataContext, DataContext>();
 
             //setting up database  
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("sqlDatabase")));
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(
+                Environment.GetEnvironmentVariable("ConnectionStrings__sqlDatabase") ??
+                configuration.GetConnectionString("sqlDatabase") ??
+                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
             return services;
         }

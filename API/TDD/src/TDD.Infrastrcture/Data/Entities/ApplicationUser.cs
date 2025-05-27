@@ -18,7 +18,7 @@ namespace TDD.Infrastructure.Data.Entities
         [PersonalData]
         public string LastName { get; set; }
 
-        public string RefreshToken { get; set; }
+        public string? RefreshToken { get; set; }
 
         public DateTime? RefreshTokenExpiry { get; set; }
 

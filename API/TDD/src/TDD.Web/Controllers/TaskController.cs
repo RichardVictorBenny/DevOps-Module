@@ -42,7 +42,7 @@ namespace TDD.Web.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("{id:Guid")]
+        [HttpDelete("{id:Guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             await translator.Delete(id);
