@@ -91,7 +91,26 @@ namespace TDD.BusinessLogic.Services
 
         public async Task Delete(Guid Id)
         {
-            throw new NotImplementedException();
+            if(userProvider.UserId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Cannot delete task without Signing In");
+            }
+
+            var userId = userProvider.UserId;
+
+            var entry = await dataContext.Tasks.FirstOrDefaultAsync(x => x.Id ==Id);
+            if (entry == null)
+            {
+                throw new InvalidOperationException("Task does not exist");
+            }
+            if (entry.UserId != userId)
+            {
+                throw new InvalidOperationException("Cannot delete Task of a different user");
+            }
+
+            dataContext.Tasks.Remove(entry);
+            await dataContext.SaveChangesAsync();
+
         }
 
         public Task<List<TaskModel>> GetAll()

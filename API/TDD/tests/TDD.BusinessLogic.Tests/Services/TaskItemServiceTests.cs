@@ -185,7 +185,7 @@ public class TaskItemServiceTests
     {
         _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
         var ex = Assert.ThrowsAsync<InvalidOperationException>(() => _taskService.Delete(Guid.NewGuid()));
-        Assert.That(ex.Message, Is.EqualTo("Cannot Delete task without Signing In"));
+        Assert.That(ex.Message, Is.EqualTo("Cannot delete task without Signing In"));
     }
 
     [Test]
@@ -193,7 +193,7 @@ public class TaskItemServiceTests
     {
         var userId = Guid.NewGuid();
         var taskId = Guid.NewGuid();
-        var task = new TaskItem { Id = taskId, Title = "Delete Me", CreatedBy = userId };
+        var task = new TaskItem { Id = taskId, Title = "Delete Me", CreatedBy = userId, UserId = userId };
 
         await _context.Tasks.AddAsync(task);
         await _context.SaveChangesAsync();
@@ -203,6 +203,32 @@ public class TaskItemServiceTests
 
         var deleted = await _context.Tasks.FindAsync(taskId);
         Assert.That(deleted, Is.Null);
+    }
+    [Test]
+    public async Task Delete_ErrorWhenTaskNotFound()
+    {
+        _userProvider.Setup(x => x.UserId).Returns(Guid.NewGuid());
+
+        var ex = Assert.ThrowsAsync<InvalidOperationException>(() => _taskService.Delete(Guid.NewGuid()));
+
+        Assert.That(ex?.Message, Is.EqualTo("Task does not exist"));
+    }
+
+    [Test]
+    public async Task Delete_ErrorWhenUserDoesNotOwnTheTaskToBeDeleted()
+    {
+        var userId = Guid.NewGuid();
+        var taskId = Guid.NewGuid();
+        var task = new TaskItem { Id = taskId, Title = "Delete Me", CreatedBy = userId, UserId = userId };
+        var secondaryUserId = Guid.NewGuid();
+
+        await _context.Tasks.AddAsync(task);
+        await _context.SaveChangesAsync();
+
+        _userProvider.Setup(x => x.UserId).Returns(secondaryUserId);
+        var ex = Assert.ThrowsAsync<InvalidOperationException>(() => _taskService.Delete(taskId));
+
+        Assert.That(ex?.Message, Is.EqualTo("Cannot delete Task of a different user"));
     }
 
     #endregion
