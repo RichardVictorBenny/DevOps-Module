@@ -419,6 +419,10 @@
               "target": "Package",
               "version": "[8.3.0, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[9.0.5, )"

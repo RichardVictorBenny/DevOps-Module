@@ -31,6 +31,7 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Micr
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.BusinessLogic.Tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll

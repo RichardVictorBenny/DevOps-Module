@@ -136,7 +136,7 @@ namespace TDD.BusinessLogic.Tests.Services
                     Assert.That(actual.Title, Is.EqualTo(expected.Title));
                 }
             });
-            
+
         }
         #endregion
 

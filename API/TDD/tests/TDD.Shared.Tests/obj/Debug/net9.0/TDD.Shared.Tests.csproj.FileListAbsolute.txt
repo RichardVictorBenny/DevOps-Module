@@ -1,3 +1,4 @@
+D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\nunit.framework.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\testhost.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\testhost.exe
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\NUnit3.TestAdapter.dll
@@ -19,7 +20,6 @@ D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\Microsoft.T
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\Newtonsoft.Json.dll
-D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\nunit.framework.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\nunit.framework.legacy.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 D:\UNI\DevOps-Module\API\TDD\tests\TDD.Shared.Tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll

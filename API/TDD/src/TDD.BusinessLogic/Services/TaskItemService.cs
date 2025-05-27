@@ -1,4 +1,5 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,7 +58,35 @@ namespace TDD.BusinessLogic.Services
 
         public async Task Update(TaskModel task)
         {
-            throw new NotImplementedException();
+            ArgumentNullException.ThrowIfNull(task);
+            if (userProvider.UserId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Cannot update task without Signing In");
+            }
+
+            var userId = userProvider.UserId;
+
+            var existingEntry = await dataContext.Tasks.FirstOrDefaultAsync(x => x.Id == task.Id);
+            if (existingEntry == null)
+            {
+                throw new InvalidOperationException("Task doesnt exist");
+            }
+
+            if (existingEntry.UserId !=  userId)
+            {
+                throw new InvalidOperationException("Cannot update other users Tasks");
+            }
+
+            existingEntry.DueDate = task.DueDate;
+            existingEntry.IsFavorite = task.IsFavorite;
+            existingEntry.IsHidden = task.IsHidden;
+            existingEntry.Title = task.Title;
+            existingEntry.Description = task.Description;
+            existingEntry.LastModifiedDate = DateTime.UtcNow;
+
+            dataContext.Tasks.Update(existingEntry);
+            await dataContext.SaveChangesAsync();
+
         }
 
         public async Task Delete(Guid Id)
