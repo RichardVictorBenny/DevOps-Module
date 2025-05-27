@@ -69,7 +69,7 @@ namespace TDD.BusinessLogic.Services
             var existingEntry = await dataContext.Tasks.FirstOrDefaultAsync(x => x.Id == task.Id);
             if (existingEntry == null)
             {
-                throw new InvalidOperationException("Task doesnt exist");
+                throw new InvalidOperationException("Task does not Exist");
             }
 
             if (existingEntry.UserId !=  userId)
