@@ -57,6 +57,25 @@ namespace TDD.BusinessLogic.Tests.Services
                 FirstName = "John",
                 LastName = "Doe"
             };
+
+            _userService.Setup(x => x.CreateAsync(It.IsAny<ApplicationUser>(), model.Password))
+                .ReturnsAsync(IdentityResult.Success);
+
+            var result = await _authService.Register(model);
+
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        public async Task RegisterReturnsFalseWhenUserCreationFails()
+        {
+            var model = new RegisterModel
+            {
+                UserName = "test@test.com",
+                Password = "Password@123",
+                FirstName = "John",
+                LastName = "Doe"
+            };
             var failedResult = IdentityResult.Failed(new IdentityError { Description = "Simulated failure" });
 
             _userService.Setup(x => x.CreateAsync(It.IsAny<ApplicationUser>(), model.Password))
