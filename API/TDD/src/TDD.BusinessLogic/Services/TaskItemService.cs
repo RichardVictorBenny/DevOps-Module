@@ -115,12 +115,35 @@ namespace TDD.BusinessLogic.Services
 
         public Task<List<TaskModel>> GetAll()
         {
-            throw new NotImplementedException();
+            if (userProvider.UserId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Cannot retrieve tasks without Signing In");
+            }
+            var userId = userProvider.UserId;
+
+            var tasks = dataContext.Tasks
+                .AsNoTracking()
+                .Where(x => x.UserId == userId)
+                .Select(x => new TaskModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Description = x.Description ?? "",
+                    DueDate = x.DueDate,
+                    IsFavorite = x.IsFavorite,
+                    IsHidden = x.IsHidden
+                });
+
+            return tasks.ToListAsync();
         }
 
         public Task<TaskModel> GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            if (userProvider.UserId == Guid.Empty)
+            {
+                throw new InvalidOperationException("Cannot retrieve task without Signing In");
+            }
+            var userId = userProvider.UserId;
         }
     }
 }

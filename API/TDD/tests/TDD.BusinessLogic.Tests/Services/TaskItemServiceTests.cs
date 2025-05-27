@@ -89,8 +89,8 @@ public class TaskItemServiceTests
         _userProvider.Setup(x => x.UserId).Returns(userId);
 
         _context.Tasks.AddRange(
-            new TaskItem { Id = Guid.NewGuid(), Title = "Test1", CreatedBy = userId },
-            new TaskItem { Id = Guid.NewGuid(), Title = "Test2", CreatedBy = userId }
+            new TaskItem { Id = Guid.NewGuid(), Title = "Test1", UserId = userId },
+            new TaskItem { Id = Guid.NewGuid(), Title = "Test2", UserId = userId }
         );
         await _context.SaveChangesAsync();
 
