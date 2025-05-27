@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using System;
+using System.Diagnostics;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using TDD.BusinessLogic.Models;
 using TDD.BusinessLogic.Services;
 using TDD.Infrastructure.Data.Entities;
@@ -67,10 +69,9 @@ namespace TDD.BusinessLogic.Tests.Services
             _userProvider.Setup(x => x.UserId).Returns(userId);
 
             _mockTaskSet.Setup(x => x.AddAsync(It.IsAny<TaskItem>(), default))
-                .ReturnsAsync((TaskItem t, CancellationToken _) =>
-                {
+                .ReturnsAsync((TaskItem t, CancellationToken _) => {
                     t.Id = expectedTaskId;
-                    return new EntityEntry<TaskItem>(null);
+                    return Mock.Of<EntityEntry<TaskItem>>();
                 });
 
             _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
@@ -92,7 +93,7 @@ namespace TDD.BusinessLogic.Tests.Services
         {
             _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
 
-            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.GetAll());
+            var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => await _taskService.GetAll());
 
             Assert.Multiple(() =>
             {
@@ -116,10 +117,8 @@ namespace TDD.BusinessLogic.Tests.Services
 
             var queryableTasks = expectedTasks.AsQueryable();
 
-            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Provider).Returns(queryableTasks.Provider);
-            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Expression).Returns(queryableTasks.Expression);
-            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.ElementType).Returns(queryableTasks.ElementType);
-            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.GetEnumerator()).Returns(() => queryableTasks.GetEnumerator());
+            SetupMockTaskSetWithQueryable(queryableTasks);
+
 
             _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
 
@@ -147,7 +146,7 @@ namespace TDD.BusinessLogic.Tests.Services
         {
             _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
 
-            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.GetById(Guid.NewGuid()));
+            var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => await _taskService.GetById(Guid.NewGuid()));
 
             Assert.Multiple(() =>
             {
@@ -166,13 +165,13 @@ namespace TDD.BusinessLogic.Tests.Services
                 Title = "Test",
                 CreatedBy = userId,
             };
+
             _userProvider.Setup(x => x.UserId).Returns(userId);
-            _mockTaskSet.Setup(x => x.FindAsync(It.IsAny<object[]>()))
-                .ReturnsAsync((object[] keyValues) =>
-                {
-                    var id = (Guid)keyValues[0];
-                    return id == expectedTask.Id ? expectedTask : null;
-                });
+
+            var taskList = new List<TaskItem> { expectedTask }.AsQueryable();
+
+            SetupMockTaskSetWithQueryable(taskList);
+
 
             _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
 
@@ -182,9 +181,32 @@ namespace TDD.BusinessLogic.Tests.Services
             {
                 Assert.That(result, Is.Not.Null);
                 Assert.That(result.Id, Is.EqualTo(expectedTask.Id));
-                 _context.Verify(x => x.Tasks, Times.Once);
+                Assert.That(result.Title, Is.EqualTo(expectedTask.Title));
             });
+
+            _context.Verify(x => x.Tasks, Times.Once);
         }
+
+
+        [Test]
+        public async Task GetById_ReturnsNullWhenTaskNotFound()
+        {
+            var userId = Guid.NewGuid();
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+
+            // Simulate an empty DbSet (no task found)
+            var taskList = new List<TaskItem>().AsQueryable();
+
+            SetupMockTaskSetWithQueryable(taskList);
+
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+
+            var result = await _taskService.GetById(Guid.NewGuid());
+
+            Assert.That(result, Is.Null);
+        }
+
         #endregion
 
         #region Update
@@ -198,7 +220,7 @@ namespace TDD.BusinessLogic.Tests.Services
             };
             _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
 
-            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.Update(updatedTask));
+            var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => await _taskService.Update(updatedTask));
 
             Assert.Multiple(() =>
             {
@@ -228,11 +250,10 @@ namespace TDD.BusinessLogic.Tests.Services
 
             _userProvider.Setup(x => x.UserId).Returns(userId);
 
-            _mockTaskSet.Setup(x => x.SingleOrDefaultAsync(It.IsAny<Expression<Func<TaskItem, bool>>>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync((Expression<Func<TaskItem, bool>> task, CancellationToken _) =>
-                {
-                    return task.Compile()(existingTask) ? existingTask : null;
-                });
+            var taskList = new List<TaskItem> { existingTask }.AsQueryable();
+
+            SetupMockTaskSetWithQueryable(taskList);
+
 
             _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
             _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
@@ -247,6 +268,37 @@ namespace TDD.BusinessLogic.Tests.Services
             });
         }
 
+
+        [Test]
+        public async Task Update_DoesNothingWhenTaskNotFound()
+        {
+            var userId = Guid.NewGuid();
+            var taskId = Guid.NewGuid();
+
+            _userProvider.Setup(x => x.UserId).Returns(userId);
+
+            var taskList = new List<TaskItem>
+                {
+                    new TaskItem
+                    {
+                        Id = Guid.NewGuid(),
+                        Title = "Unrelated Task",
+                        CreatedBy = userId
+                    }
+                }.AsQueryable();
+
+            SetupMockTaskSetWithQueryable(taskList);
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+
+            await _taskService.Update(new TaskModel { Id = taskId, Title = "Shouldn't matter" });
+
+            _mockTaskSet.Verify(x => x.Update(It.IsAny<TaskItem>()), Times.Never);
+            _context.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+        }
+
+
+
         #endregion
 
         #region Delete
@@ -257,7 +309,7 @@ namespace TDD.BusinessLogic.Tests.Services
             var taskId = Guid.NewGuid();
             _userProvider.Setup(x => x.UserId).Returns(Guid.Empty);
 
-            var ex = Assert.Throws<InvalidOperationException>(async () => await _taskService.Delete(taskId));
+            var ex = Assert.ThrowsAsync<InvalidOperationException>(async () => await _taskService.Delete(taskId));
 
             Assert.Multiple(() =>
             {
@@ -280,11 +332,11 @@ namespace TDD.BusinessLogic.Tests.Services
             };
 
             _userProvider.Setup(x => x.UserId).Returns(userId);
-            _mockTaskSet.Setup(x => x.SingleOrDefaultAsync(It.IsAny<Expression<Func<TaskItem, bool>>>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync((Expression<Func<TaskItem, bool>> task, CancellationToken _) =>
-                {
-                    return task.Compile()(taskItem) ? taskItem : null;
-                });
+
+            var taskList = new List<TaskItem> { taskItem }.AsQueryable();
+
+            SetupMockTaskSetWithQueryable(taskList);
+
 
             _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
             _context.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
@@ -297,7 +349,18 @@ namespace TDD.BusinessLogic.Tests.Services
                 _context.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
             });
         }
+
         #endregion
+
+        private void SetupMockTaskSetWithQueryable(IQueryable<TaskItem> taskList)
+        {
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Provider).Returns(taskList.Provider);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.Expression).Returns(taskList.Expression);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.ElementType).Returns(taskList.ElementType);
+            _mockTaskSet.As<IQueryable<TaskItem>>().Setup(m => m.GetEnumerator()).Returns(() => taskList.GetEnumerator());
+
+            _context.Setup(x => x.Tasks).Returns(_mockTaskSet.Object);
+        }
 
     }
 }
