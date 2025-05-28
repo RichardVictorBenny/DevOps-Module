@@ -18,11 +18,12 @@ pipeline {
 
 
         stage('Frontend Lint & Test') {
-            when {
-                changeset "**/frontend/**"
-            }
+            // when {
+            //     changeset "**/frontend/**"
+            // }
             steps {
                 dir('frontend/UI') {
+                    sh 'ls -ltra'
                     echo "Installing frontend dependencies..."
                     sh 'npm ci'
 
