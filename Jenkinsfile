@@ -22,7 +22,7 @@ pipeline {
             //     changeset "**/frontend/**"
             // }
             steps {
-                dir('frontend/UI') {
+                dir('frontend/UI/') {
                     sh 'ls package-lock.json'
                     sh 'pwd'
                     echo "Installing frontend dependencies..."
