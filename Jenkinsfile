@@ -18,9 +18,9 @@ pipeline {
 
 
         stage('Frontend Lint & Test') {
-            // when {
-            //     changeset "**/frontend/**"
-            // }
+            when {
+                changeset "**/frontend/**"
+            }
             steps {
                 dir('Frontend/UI/') {
                     echo "Installing frontend dependencies..."
