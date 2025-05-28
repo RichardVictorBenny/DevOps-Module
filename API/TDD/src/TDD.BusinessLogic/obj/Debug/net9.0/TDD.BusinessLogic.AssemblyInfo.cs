@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TDD.BusinessLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e86f8dde4e63ee8d928924b4518053059ff927af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd0fbe37cd5b3038e88cddac8a5b0928b536da4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TDD.BusinessLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TDD.BusinessLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
