@@ -1,0 +1,13 @@
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\bin\Release\net9.0\TDD.Shared.deps.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\bin\Release\net9.0\TDD.Shared.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\bin\Release\net9.0\TDD.Shared.pdb
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.csproj.AssemblyReference.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.AssemblyInfoInputs.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.AssemblyInfo.cs
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.csproj.CoreCompileInputs.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.sourcelink.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\refint\TDD.Shared.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\TDD.Shared.pdb
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Shared\obj\Release\net9.0\ref\TDD.Shared.dll

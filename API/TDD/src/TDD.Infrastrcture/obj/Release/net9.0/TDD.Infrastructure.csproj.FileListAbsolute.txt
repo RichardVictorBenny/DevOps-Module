@@ -1,0 +1,15 @@
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\bin\Release\net9.0\TDD.Infrastructure.deps.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\bin\Release\net9.0\TDD.Infrastructure.runtimeconfig.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\bin\Release\net9.0\TDD.Infrastructure.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\bin\Release\net9.0\TDD.Infrastructure.pdb
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.csproj.AssemblyReference.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.AssemblyInfoInputs.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.AssemblyInfo.cs
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.csproj.CoreCompileInputs.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.sourcelink.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\refint\TDD.Infrastructure.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.pdb
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\TDD.Infrastructure.genruntimeconfig.cache
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Infrastrcture\obj\Release\net9.0\ref\TDD.Infrastructure.dll

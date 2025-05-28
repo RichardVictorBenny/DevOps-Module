@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\UNI\\DevOps-Module\\API\\TDD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B4F62A2-A6BC-4EE2-A646-37C1A3F24099}|src\\TDD.Web\\TDD.Web.csproj|solutionrelative:src\\tdd.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7A63D346-70C4-4A49-9A96-9A3C31D11B27}|src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj|d:\\uni\\devops-module\\api\\tdd\\src\\tdd.infrastrcture\\migrations\\20250527204438_addbackthedroppedcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A63D346-70C4-4A49-9A96-9A3C31D11B27}|src\\TDD.Infrastrcture\\TDD.Infrastructure.csproj|solutionrelative:src\\tdd.infrastrcture\\migrations\\20250527204438_addbackthedroppedcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -111,6 +119,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "src\\TDD.Web\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "src\\TDD.Web\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T21:34:39.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\TDD.Web\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\TDD.Web\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-27T21:29:17.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20250527204438_AddBackTheDroppedColumn.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Migrations\\20250527204438_AddBackTheDroppedColumn.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Migrations\\20250527204438_AddBackTheDroppedColumn.cs",
@@ -123,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "20250527204223_RemoveLastModifiedDate.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Migrations\\20250527204223_RemoveLastModifiedDate.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Migrations\\20250527204223_RemoveLastModifiedDate.cs",
@@ -135,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AsyncProviders.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.BusinessLogic.Tests\\Helpers\\AsyncProviders.cs",
               "RelativeDocumentMoniker": "tests\\TDD.BusinessLogic.Tests\\Helpers\\AsyncProviders.cs",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TaskItemConfiguration.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Configurations\\TaskItemConfiguration.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Configurations\\TaskItemConfiguration.cs",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Entities\\TaskItem.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Entities\\TaskItem.cs",
@@ -171,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "TaskItemServiceTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.BusinessLogic.Tests\\Services\\TaskItemServiceTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.BusinessLogic.Tests\\Services\\TaskItemServiceTests.cs",
@@ -183,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "TaskControllerTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Controllers\\TaskControllerTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Controllers\\TaskControllerTests.cs",
@@ -195,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Controllers\\TaskController.cs",
@@ -207,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AuthenticationControllerTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Controllers\\AuthenticationControllerTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Controllers\\AuthenticationControllerTests.cs",
@@ -219,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "AuthenticationTranslatorTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Translators\\AuthenticationTranslatorTests.cs",
@@ -231,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ITaskTranslator.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\Interfaces\\ITaskTranslator.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Translators\\Interfaces\\ITaskTranslator.cs",
@@ -243,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\UserService.cs",
@@ -255,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "TaskTranslator.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\Translators\\TaskTranslator.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\Translators\\TaskTranslator.cs",
@@ -267,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "TaskModel.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Models\\TaskModel.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Models\\TaskModel.cs",
@@ -279,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ITaskItemService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\Interfaces\\ITaskItemService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\Interfaces\\ITaskItemService.cs",
@@ -291,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Entities\\ApplicationUser.cs",
@@ -303,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ApplicationUserConfiguration.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Configurations\\ApplicationUserConfiguration.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Configurations\\ApplicationUserConfiguration.cs",
@@ -315,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "TaskViewModel.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Web\\ViewModels\\TaskViewModel.cs",
               "RelativeDocumentMoniker": "src\\TDD.Web\\ViewModels\\TaskViewModel.cs",
@@ -333,7 +367,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "TaskTranslatorTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.Web.Tests\\Translators\\TaskTranslatorTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.Web.Tests\\Translators\\TaskTranslatorTests.cs",
@@ -345,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DataContext.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\DataContext.cs",
@@ -357,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TaskItemService.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.BusinessLogic\\Services\\TaskItemService.cs",
               "RelativeDocumentMoniker": "src\\TDD.BusinessLogic\\Services\\TaskItemService.cs",
@@ -370,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "AuthServiceTests.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
               "RelativeDocumentMoniker": "tests\\TDD.BusinessLogic.Tests\\Services\\AuthServiceTests.cs",
@@ -382,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "IDataContext.cs",
               "DocumentMoniker": "D:\\UNI\\DevOps-Module\\API\\TDD\\src\\TDD.Infrastrcture\\Data\\Interfaces\\IDataContext.cs",
               "RelativeDocumentMoniker": "src\\TDD.Infrastrcture\\Data\\Interfaces\\IDataContext.cs",
