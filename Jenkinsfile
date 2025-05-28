@@ -23,10 +23,10 @@ pipeline {
             // }
             steps {
                 dir('frontend/UI') {
-                    sh 'ls -ltra'
+                    sh 'ls -la'
                     sh 'pwd'
                     echo "Installing frontend dependencies..."
-                    sh 'npm ci'
+                    sh 'npm i'
 
                     echo "Linting frontend..."
                     sh 'npm run lint'
