@@ -22,11 +22,9 @@ pipeline {
             //     changeset "**/frontend/**"
             // }
             steps {
-                dir('frontend/UI/') {
-                    sh 'ls package-lock.json'
-                    sh 'pwd'
+                dir('Frontend/UI/') {
                     echo "Installing frontend dependencies..."
-                    sh 'npm i'
+                    sh 'npm ci'
 
                     echo "Linting frontend..."
                     sh 'npm run lint'
