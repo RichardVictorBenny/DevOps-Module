@@ -18,9 +18,9 @@ pipeline {
 
 
         stage('Frontend Lint & Test') {
-            // when {
-            //     changeset "**/frontend/**"
-            // }
+            when {
+                changeset "**/frontend/**"
+            }
             steps {
                 dir('frontend') {
                     echo "Installing frontend dependencies..."
@@ -36,9 +36,9 @@ pipeline {
         }
 
         stage('Backend Lint & Test') {
-            // when {
-            //     changeset "**/API/**"
-            // }
+            when {
+                changeset "**/API/**"
+            }
             steps {
                 dir('API/TDD') {
                     echo "Restoring .NET dependencies..."
@@ -54,9 +54,9 @@ pipeline {
         }
 
         stage('Build Frontend') {
-            // when {
-            //     changeset "**/frontend/**"
-            // }
+            when {
+                changeset "**/frontend/**"
+            }
             steps {
                 dir('frontend') {
                     echo "Building frontend..."
@@ -66,9 +66,9 @@ pipeline {
         }
 
         stage('Build Backend') {
-            // when {
-            //     changeset "**/backend/**"
-            // }
+            when {
+                changeset "**/backend/**"
+            }
             steps {
                 dir('API/TDD') {
                     echo "Rebuilding backend for deployment..."
