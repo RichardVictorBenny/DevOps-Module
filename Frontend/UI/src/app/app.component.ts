@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { environment } from '../environments/environment';
 import { LayoutService } from './shared/services/layout.service';
 import { CommonModule } from '@angular/common';
 import { MatModule } from './shared/modules/mat.module';
@@ -15,7 +14,7 @@ export class AppComponent implements OnInit {
 
   title = 'UI';
 
-  public isStandalonePage: boolean = false;
+  public isStandalonePage = false;
 
   constructor(private layoutService: LayoutService) { }
 

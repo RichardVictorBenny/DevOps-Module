@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthorizationInterceptor implements HttpInterceptor {
-  private isRefreshing: boolean = false;
+  private isRefreshing = false;
   private refreshRequest$: Subject<LoginResponse> = new Subject<LoginResponse>();
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -59,6 +59,7 @@ export class AuthorizationInterceptor implements HttpInterceptor {
     );
   }
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   public refreshTokenMethod(
     request: HttpRequest<any>,
     next: HttpHandler,
@@ -108,12 +109,8 @@ export class AuthorizationInterceptor implements HttpInterceptor {
   public LogoutAndRedirect() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    this.router.navigateByUrl('/login', { skipLocationChange: true }).then(
-      () => {
-      },
-      catchError((error) => {
-        return throwError(() => error);
-      })
-    );
+    this.router.navigateByUrl('/login', { skipLocationChange: true }).catch((error) => {
+      return throwError(() => error);
+    });
   }
 }
