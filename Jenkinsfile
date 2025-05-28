@@ -23,7 +23,7 @@ pipeline {
             // }
             steps {
                 dir('frontend/UI') {
-                    sh 'ls -la'
+                    sh 'ls package-lock.json'
                     sh 'pwd'
                     echo "Installing frontend dependencies..."
                     sh 'npm i'
