@@ -23,7 +23,6 @@ pipeline {
             }
             steps {
                 dir('frontend/UI') {
-                    echo
                     echo "Installing frontend dependencies..."
                     sh 'npm ci'
 
