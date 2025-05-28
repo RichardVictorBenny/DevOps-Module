@@ -91,6 +91,18 @@
         }
       }
     },
+    "/api/Authentication/CurrentUser": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Task": {
       "get": {
         "tags": [

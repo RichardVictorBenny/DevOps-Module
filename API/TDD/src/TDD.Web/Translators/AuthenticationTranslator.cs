@@ -15,7 +15,10 @@ using TDD.BusinessLogic.Models;
 using TDD.BusinessLogic.Services.Interfaces;
 using TDD.Infrastructure.Data.Entities;
 using TDD.Infrastructure.Data.Interfaces;
+using TDD.Shared.Models;
 using TDD.Shared.Options;
+using TDD.Shared.Providers;
+using TDD.Web.Providers;
 using TDD.Web.Translators.Interfaces;
 using TDD.Web.ViewModels;
 
@@ -26,14 +29,22 @@ namespace TDD.Web.Translators
         private readonly IAuthService authService;
         private readonly IDataProtectionProvider dataProtection;
         private readonly IUserService userService;
+        private readonly IUserProvider userProvider;
         private readonly JwtSettings jwtSettings;
 
 
-        public AuthenticationTranslator(IAuthService authService, IOptions<JwtSettings> settings, IDataProtectionProvider dataProtection, IUserService userService)
+        public AuthenticationTranslator(
+            IAuthService authService, 
+            IOptions<JwtSettings> settings, 
+            IDataProtectionProvider dataProtection, 
+            IUserService userService, 
+            IUserProvider userProvider
+         )
         {
             this.authService = authService ?? throw new ArgumentNullException(nameof(authService));
             this.dataProtection = dataProtection ?? throw new ArgumentNullException(nameof(dataProtection));
             this.userService = userService;
+            this.userProvider = userProvider;
             this.jwtSettings = settings.Value ?? throw new ArgumentNullException(nameof(jwtSettings));
         }
         public async Task<bool> Register(RegisterViewModel viewModel)
@@ -108,6 +119,13 @@ namespace TDD.Web.Translators
                 return TypedResults.Ok(value: accessTokenResponse);
             }
 
+        public async Task<UserViewModel?> GetCurrentUser()
+        {
+            var user = await userProvider.GetCurrentUser();
+            if (user == null) return null;
+            return Map(user);
+        }
+
         private LoginModel Map(LoginViewModel model)
         {
             return new LoginModel {
@@ -128,6 +146,16 @@ namespace TDD.Web.Translators
             };
         }
 
+        private UserViewModel Map(UserModel model)
+        {
+            return new UserViewModel
+            {
+                UserId = model.UserId,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+            };
+        }
     }
 
 }

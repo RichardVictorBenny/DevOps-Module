@@ -41,5 +41,13 @@ namespace TDD.Web.Controllers
             var result = await translator.Refresh(refreshToken);
             return result;
         }
+
+        [HttpGet("CurrentUser")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var user = await translator.GetCurrentUser();
+            if (user == null) return Unauthorized("User is not logged in");
+            return Ok(user);
+        }
     }
 }

@@ -37,6 +37,23 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+string allowedOrigins = "_allowedOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        name: allowedOrigins,
+        builder =>
+        {
+            builder.SetIsOriginAllowedToAllowWildcardSubdomains().WithOrigins(
+                "https://localhost:4200",
+                "https://localhost",
+                "http://localhost:4200",
+                "http://localhost"
+             ).AllowAnyHeader().AllowAnyMethod();
+        });
+});
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddHttpContextAccessor();
@@ -74,7 +91,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Configure the HTTP request pipeline.
+app.UseCors(allowedOrigins);
 
 app.UseHttpsRedirection();
 

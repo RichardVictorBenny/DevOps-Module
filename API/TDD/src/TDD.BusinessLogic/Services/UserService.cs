@@ -50,7 +50,7 @@ namespace TDD.BusinessLogic.Services
             return await userManager.UpdateAsync(user);
         }
 
-        public async Task<ApplicationUser> GetUserAsync(ClaimsPrincipal user)
+        public async Task<ApplicationUser?> GetUserAsync(ClaimsPrincipal user)
         {
             return await userManager.GetUserAsync(user);
         }

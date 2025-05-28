@@ -9,5 +9,6 @@ namespace TDD.Web.Translators.Interfaces
         Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login(LoginViewModel viewModel);
         Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(string refreshToken);
         Task<bool> Register(RegisterViewModel viewModel);
+        Task<UserViewModel> GetCurrentUser();
     }
 }

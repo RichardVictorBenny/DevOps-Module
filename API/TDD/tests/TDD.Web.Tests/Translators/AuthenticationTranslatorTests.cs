@@ -12,32 +12,41 @@ using TDD.BusinessLogic.Services;
 using TDD.BusinessLogic.Services.Interfaces;
 using TDD.Infrastructure.Data.Entities;
 using TDD.Shared.Options;
+using TDD.Shared.Providers;
 using TDD.Web.Translators;
+using TDD.Web.Translators.Interfaces;
 
 namespace TDD.Web.Tests.Translators
 {
     [TestFixture]   
     public class AuthenticationTranslatorTests
     {
+        private IAuthenticationTranslator translator;
 
-        #region Register
-        [Test]
-        public void RegisterErrorWithoutViewMode()
+        [SetUp]
+        public void SetUp()
         {
-
             var authSettings = new Mock<IAuthService>().Object;
-            var jwtSettings = Options.Create(new JwtSettings {
+            var jwtSettings = Options.Create(new JwtSettings
+            {
                 Key = "test-key",
                 Issuer = "test-issuer",
                 Audience = "test-audience"
             });
             var dataProtector = new Mock<IDataProtectionProvider>().Object;
             var userService = new Mock<IUserService>().Object;
+             var userProvider = new Mock<IUserProvider> ().Object;
 
 
-            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
 
+             translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService, userProvider);
 
+        }
+
+        #region Register
+        [Test]
+        public void RegisterErrorWithoutViewMode()
+        {
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => { await translator.Register(null); });
 
             Assert.Multiple(() =>
@@ -55,19 +64,6 @@ namespace TDD.Web.Tests.Translators
         public void LoginErrorsWithoutViewModel()
         {
 
-            var authSettings = new Mock<IAuthService>().Object;
-            var jwtSettings = Options.Create(new JwtSettings
-            {
-                Key = "test-key",
-                Issuer = "test-issuer",
-                Audience = "test-audience"
-            });
-            var dataProtector = new Mock<IDataProtectionProvider>().Object;
-            var userService = new Mock<IUserService>().Object;
-
-
-            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
-
 
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () => { await translator.Login(null); });
 
@@ -84,19 +80,7 @@ namespace TDD.Web.Tests.Translators
         [Test]
         public void RefreshWithoutRefreshToken()
         {
-            //Arrange
-            var authSettings = new Mock<IAuthService>().Object;
-            var jwtSettings = Options.Create(new JwtSettings
-            {
-                Key = "test-key",
-                Issuer = "test-issuer",
-                Audience = "test-audience"
-            });
-            var dataProtector = new Mock<IDataProtectionProvider>().Object;
-            var userService = new Mock<IUserService>().Object;
 
-
-            var translator = new AuthenticationTranslator(authSettings, jwtSettings, dataProtector, userService);
             //Act
             var ex = Assert.ThrowsAsync<ArgumentNullException>(async () =>
             {
