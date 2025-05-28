@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-title>Login</mat-card-title>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required />
+        <mat-error *ngIf="loginForm.get('email')?.invalid">Email is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Password is required</mat-error>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+
+      <button mat-flat-button color="primary" class="full-width" type="submit" [disabled]="loginForm.invalid">
+        Login
+      </button>
+    </form>
+  </mat-card>
+</div>

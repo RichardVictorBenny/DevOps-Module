@@ -1,3 +1,5 @@
 <router-outlet *ngIf="isStandalonePage"></router-outlet>
 
-hi
+<ng-container *ngIf="!isStandalonePage">
+    <p>Welcome to the main application!</p>
+</ng-container>
