@@ -7,7 +7,7 @@ import { MatModule } from './shared/modules/mat.module';
 
 @Component({
   selector: 'app-root',
-  imports: [ CommonModule, MatModule],
+  imports: [RouterOutlet, CommonModule, MatModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
