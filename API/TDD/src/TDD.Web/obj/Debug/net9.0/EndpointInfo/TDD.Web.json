@@ -223,11 +223,11 @@
       "LoginViewModel": {
         "required": [
           "password",
-          "userName"
+          "username"
         ],
         "type": "object",
         "properties": {
-          "userName": {
+          "username": {
             "minLength": 1,
             "type": "string"
           },

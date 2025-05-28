@@ -3,6 +3,7 @@ import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { LoginResponse, RefreshTokenBody, User } from '../models';
 import { Observable } from 'rxjs';
+import { LoginRequest } from '../models/login-request.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,15 @@ export class AuthService {
   public GetCurrentUser(): Observable<User> {
     const endpoint = `${environment.apiUrl}/Authentication/CurrentUser`;
     return this.http.get<User>(endpoint);
+  }
+
+  public Login(body: LoginRequest): Observable<LoginResponse> {
+    const endpoint = `${environment.apiUrl}/Authentication/Login`;
+    return this.http.post<LoginResponse>(endpoint, body);
+  }
+
+  public Logout(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
   }
 }

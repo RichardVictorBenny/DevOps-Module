@@ -129,7 +129,7 @@ namespace TDD.Web.Translators
         private LoginModel Map(LoginViewModel model)
         {
             return new LoginModel {
-                UserName = model.UserName,
+                UserName = model.Username,
                 Password = model.Password,
             };
 
