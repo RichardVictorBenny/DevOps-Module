@@ -24,6 +24,7 @@ pipeline {
             steps {
                 dir('frontend/UI') {
                     sh 'ls -ltra'
+                    sh 'pwd'
                     echo "Installing frontend dependencies..."
                     sh 'npm ci'
 
