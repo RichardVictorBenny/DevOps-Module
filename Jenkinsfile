@@ -19,7 +19,7 @@ pipeline {
 
         stage('Frontend Lint & Test') {
             when {
-                changeset "**/frontend/**"
+                changeset "**/Frontend/**"
             }
             steps {
                 dir('Frontend/UI/') {
@@ -55,10 +55,10 @@ pipeline {
 
         stage('Build Frontend') {
             when {
-                changeset "**/frontend/**"
+                changeset "**/Frontend/**"
             }
             steps {
-                dir('frontend') {
+                dir('Frontend/UI/') {
                     echo "Building frontend..."
                     sh 'npm run build'
                 }
@@ -67,7 +67,7 @@ pipeline {
 
         stage('Build Backend') {
             when {
-                changeset "**/backend/**"
+                changeset "**/API/**"
             }
             steps {
                 dir('API/TDD') {
