@@ -22,7 +22,8 @@ pipeline {
                 changeset "**/frontend/**"
             }
             steps {
-                dir('frontend') {
+                dir('frontend/UI') {
+                    echo
                     echo "Installing frontend dependencies..."
                     sh 'npm ci'
 
