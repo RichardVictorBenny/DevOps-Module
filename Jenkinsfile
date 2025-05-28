@@ -24,13 +24,13 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo "Installing frontend dependencies..."
-                    // sh 'npm ci'
+                    sh 'npm ci'
 
                     echo "Linting frontend..."
-                    // sh 'npm run lint'
+                    sh 'npm run lint'
 
                     echo "Running frontend unit tests..."
-                    // sh 'npm test -- --watch=false --browsers=ChromeHeadless'
+                    sh 'npm test'
                 }
             }
         }
@@ -60,7 +60,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo "Building frontend..."
-                    // sh 'npm run build'
+                    sh 'npm run build'
                 }
             }
         }
