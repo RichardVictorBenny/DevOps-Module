@@ -139,10 +139,10 @@ namespace TDD.Web.Translators
         {
             return new RegisterModel
             {
-                UserName = model.UserName,
+                UserName = model.Username,
                 Password = model.Password,
-                FirstName = model.FirstName,
-                LastName = model.LastName
+                FirstName = model.Firstname,
+                LastName = model.Lastname
             };
         }
 

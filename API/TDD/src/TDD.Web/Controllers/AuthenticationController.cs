@@ -30,10 +30,10 @@ namespace TDD.Web.Controllers
             var result = await translator.Register(model);
             if (!result)
             {
-                return BadRequest("Something went wrong");
+                return BadRequest( error: "Something went wrong");
             }
 
-            return Ok("Registration successful");
+            return Ok();
         }
 
         [HttpPost("Refresh", Name = "Refresh")]

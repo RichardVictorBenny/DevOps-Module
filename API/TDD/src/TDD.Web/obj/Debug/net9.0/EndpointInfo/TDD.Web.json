@@ -240,14 +240,14 @@
       },
       "RegisterViewModel": {
         "required": [
-          "firstName",
-          "lastName",
+          "firstname",
+          "lastname",
           "password",
-          "userName"
+          "username"
         ],
         "type": "object",
         "properties": {
-          "userName": {
+          "username": {
             "minLength": 1,
             "type": "string"
           },
@@ -255,11 +255,11 @@
             "minLength": 1,
             "type": "string"
           },
-          "firstName": {
+          "firstname": {
             "minLength": 1,
             "type": "string"
           },
-          "lastName": {
+          "lastname": {
             "minLength": 1,
             "type": "string"
           }

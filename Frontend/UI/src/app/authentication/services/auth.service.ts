@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { LoginResponse, RefreshTokenBody, User } from '../models';
+import { LoginResponse, RefreshTokenBody, RegisterRequest, User } from '../models';
 import { Observable } from 'rxjs';
 import { LoginRequest } from '../models/login-request.model';
 
@@ -37,6 +37,11 @@ export class AuthService {
   public Login(body: LoginRequest): Observable<LoginResponse> {
     const endpoint = `${environment.apiUrl}/Authentication/Login`;
     return this.http.post<LoginResponse>(endpoint, body);
+  }
+  
+  public Register(body: RegisterRequest): Observable<void> {
+    const endpoint = `${environment.apiUrl}/Authentication/Register`;
+    return this.http.post<void>(endpoint, body);
   }
 
   public Logout(): void {

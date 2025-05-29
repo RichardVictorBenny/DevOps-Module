@@ -7,5 +7,5 @@ export const routes: Routes = [
     {path: 'home', component: TaskListComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', loadComponent: () => import('./authentication/components/register/register.component').then(m => m.RegisterComponent)},
-    {path: '**', redirectTo: "home", pathMatch: 'full'}// can pass 404 component here if needed
+    {path: '**', redirectTo: "home", pathMatch: 'full'}// can pass 404 here
 ];
