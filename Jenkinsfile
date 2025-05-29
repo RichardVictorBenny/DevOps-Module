@@ -16,6 +16,13 @@ pipeline {
             }
         }
 
+        stage('Files'){
+            steps {
+                echo "Checking for changes in the repository..."
+                sh 'pwd'
+                sh "ls -la"
+            }
+        }
 
         stage('Frontend Lint & Test') {
             when {

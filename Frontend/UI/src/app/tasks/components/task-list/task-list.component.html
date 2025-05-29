@@ -26,8 +26,7 @@
 <div
   *ngIf="
     !regularTasks ||
-    (regularTasks.length === 0 && !favoriteTasks) ||
-    favoriteTasks.length === 0
+    (regularTasks.length === 0 && (!favoriteTasks || favoriteTasks.length === 0))
   "
 >
   <p>No tasks found.</p>
