@@ -5,7 +5,7 @@ import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task-card',
-  standalone: false,
+  
   templateUrl: './task-card.component.html',
   styleUrl: './task-card.component.scss'
 })

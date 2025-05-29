@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormService } from '../../../shared/services/form.service';
@@ -7,11 +7,11 @@ import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task',
-  standalone: false,
+  
   templateUrl: './task.component.html',
   styleUrl: './task.component.scss'
 })
-export class TaskComponent {
+export class TaskComponent implements OnInit {
   task: Task | null = null;
   taskForm!: FormGroup;
 
