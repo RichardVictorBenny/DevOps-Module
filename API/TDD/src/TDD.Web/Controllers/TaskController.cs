@@ -49,7 +49,7 @@ namespace TDD.Web.Controllers
             return NoContent();
         }
 
-        [HttpPut]
+        [HttpPut("{id:Guid}")]
         public async Task<IActionResult> Update(TaskViewModel task)
         {
             await translator.Update(task);

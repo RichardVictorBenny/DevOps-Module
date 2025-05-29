@@ -37,7 +37,7 @@ namespace TDD.Web.Controllers
         }
 
         [HttpPost("Refresh", Name = "Refresh")]
-        public async Task<IResult> Refresh(string refreshToken)
+        public async Task<IResult> Refresh(RefreshTokenViewModel refreshToken)
         {
             var result = await translator.Refresh(refreshToken);
             return result;

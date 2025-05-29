@@ -1,0 +1,43 @@
+<mat-grid-list cols="5">
+  <ng-container *ngFor="let task of tasks">
+    <mat-grid-tile>
+      <mat-card class="task-card">
+        <mat-card-content>
+          <div class="task-list">
+            <div class="task-item">
+              <a
+                [routerLink]="['task', task.id]"
+                routerLinkActive="active-link"
+                class="task-title-link"
+              >
+                {{ task.title }}
+              </a>
+
+              <p>{{ task.description }}</p>
+              <p>Due: {{ task.dueDate | date }}</p>
+              <div>
+                <button mat-icon-button (click)="toggleFavorite(task)">
+                  <mat-icon>{{
+                    task.isFavorite ? "favorite" : "favorite_border"
+                  }}</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="deleteTask(task)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+              <!-- Completed Button -->
+              <mat-slide-toggle
+                class="custom-toggle"
+                color="primary"
+                [checked]="task.isHidden"
+                (change)="markAsCompleted(task, $event.checked)"
+              >
+                {{ task.isHidden ? "Completed" : "Mark as Completed" }}
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

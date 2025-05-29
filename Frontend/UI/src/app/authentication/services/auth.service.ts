@@ -16,6 +16,11 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+  public get User(): string | null {
+    return localStorage.getItem('user');
+  }
+
+  // eslint-disable-next-line @typescript-eslint/adjacent-overload-signatures
   public set Token(value: string | null) {
     if (value) {
       localStorage.setItem('token', value);
@@ -24,9 +29,14 @@ export class AuthService {
     }
   }
 
+  public IsAuthenticated(): boolean {
+    return this.Token !== null && this.User !== null;
+  }
+
   public RefreshToken(body: RefreshTokenBody): Observable<LoginResponse> {
+    console.log('Refreshing token...', body);
     const endpoint = `${environment.apiUrl}/Authentication/Refresh`;
-    return this.http.post<LoginResponse>(endpoint, body);
+    return this.http.post<LoginResponse>(endpoint, {refreshToken: body.refreshToken});
   }
 
   public GetCurrentUser(): Observable<User> {

@@ -1,1 +1,52 @@
-<p>task works!</p>
+<form *ngIf="taskForm" class="task-form-card" [formGroup]="taskForm" (ngSubmit)="onSave()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Add New Task</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="task-form">
+        <!-- Title -->
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" />
+        </mat-form-field>
+
+        <!-- Description -->
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" ></textarea>
+        </mat-form-field>
+
+        <!-- Due Date -->
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Due Date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="dueDate"
+          />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <!-- Favorite -->
+                <p><mat-slide-toggle formControlName="isFavorite">Mark as Favorite</mat-slide-toggle></p>
+    
+                <!-- Hidden -->
+                <p><mat-slide-toggle formControlName="isHidden">Mark as completed</mat-slide-toggle></p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!taskForm.valid"
+      >
+        Save Task
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

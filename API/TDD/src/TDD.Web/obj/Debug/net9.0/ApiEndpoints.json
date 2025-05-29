@@ -36,8 +36,8 @@
     "Parameters": [
       {
         "Name": "refreshToken",
-        "Type": "System.String",
-        "IsRequired": false
+        "Type": "TDD.Web.ViewModels.RefreshTokenViewModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [],
@@ -88,22 +88,6 @@
   },
   {
     "ContainingType": "TDD.Web.Controllers.TaskController",
-    "Method": "Update",
-    "RelativePath": "api/Task",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "task",
-        "Type": "TDD.Web.ViewModels.TaskViewModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TDD.Web.Controllers.TaskController",
     "Method": "Get",
     "RelativePath": "api/Task/{id}",
     "HttpMethod": "GET",
@@ -129,6 +113,27 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TDD.Web.Controllers.TaskController",
+    "Method": "Update",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "task",
+        "Type": "TDD.Web.ViewModels.TaskViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],

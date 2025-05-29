@@ -170,7 +170,6 @@ D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Web\bin\Debug\net9.0\ru\
 D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Web\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Web\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Richard\Studing\C#\LiteCleanArchitecture\TDD\src\TDD.Web\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\appsettings.Development.json
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\appsettings.json
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\TDD.Web.staticwebassets.endpoints.json
@@ -219,6 +218,7 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.L
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
@@ -348,10 +348,10 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuil
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.TDD.Web.props
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.TDD.Web.props
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.pack.json
+D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.csproj.Up2Date
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\refint\TDD.Web.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.pdb
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.genruntimeconfig.cache
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\ref\TDD.Web.dll
-D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

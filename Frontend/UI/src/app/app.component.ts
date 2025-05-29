@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { LayoutService } from './shared/services/layout.service';
 import { CommonModule } from '@angular/common';
 import { MatModule } from './shared/modules/mat.module';
+import { TaskModule } from "./tasks/task.module";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, MatModule],
+  imports: [RouterOutlet, CommonModule, MatModule, TaskModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,1 +1,48 @@
-<p>task-list works!</p>
+<mat-grid-list cols="1" rowHeight="1:.1">
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-content class="task-create-card">
+        <button
+          mat-flat-button
+          color="primary"
+          class="task-create-button"
+          (click)="createTask()"
+        >
+          Create Task
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- <mat-toolbar color="primary" class="task-list-header">
+  <span>Task List</span>
+</mat-toolbar> -->
+<div class="task-list-card" *ngIf="favoriteTasks && favoriteTasks.length > 0">
+  <app-task-card
+    [tasks]="favoriteTasks"
+    (taskUpdated)="onTaskUpdated($event)"
+    ></app-task-card>
+</div>
+<div
+  *ngIf="
+    !regularTasks ||
+    (regularTasks.length === 0 && !favoriteTasks) ||
+    favoriteTasks.length === 0
+  "
+>
+  <p>No tasks found.</p>
+</div>
+<div class="divider"></div>
+<div class="task-list-card" *ngIf="regularTasks && regularTasks.length > 0">
+  <app-task-card
+    [tasks]="regularTasks"
+    (taskUpdated)="onTaskUpdated()"
+    ></app-task-card>
+</div>
+<div class="divider"></div>
+<div class="task-list-card" *ngIf="completedTasks && completedTasks.length > 0">
+  <app-task-card
+    [tasks]="completedTasks"
+    (taskUpdated)="onTaskUpdated()"
+    ></app-task-card>
+</div>

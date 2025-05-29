@@ -82,14 +82,14 @@ namespace TDD.Web.Translators
             return TypedResults.Ok(value: accessTokenResponse);
         }
 
-            public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(string refreshToken)
+            public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Refresh(RefreshTokenViewModel viewModel)
             {
-                ArgumentNullException.ThrowIfNull(refreshToken);
+                ArgumentNullException.ThrowIfNull(viewModel);
                 var protector = dataProtection.CreateProtector("RefreshToken");
                 string rawRefreshToken;
                 try
                 {
-                    rawRefreshToken = protector.Unprotect(refreshToken);
+                    rawRefreshToken = protector.Unprotect(viewModel.RefreshToken);
                 }
                 catch (CryptographicException)
                 {
@@ -108,7 +108,7 @@ namespace TDD.Web.Translators
 
                 var tokenString = this.authService.GenerateTokenString(user);
                 var newRefreshToken = await this.authService.GenerateRefreshTokenString(user);
-                var protectedRefreshToken = protector.Protect(refreshToken);
+                var protectedRefreshToken = protector.Protect(viewModel.RefreshToken);
 
                 var accessTokenResponse = new AccessTokenResponse
                 {

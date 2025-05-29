@@ -49,9 +49,9 @@ export class AuthorizationInterceptor implements HttpInterceptor {
 
     return next.handle(request).pipe(
       catchError((error:HttpErrorResponse) => {
-        if (error.status === 401 && isApiUrl) {
+        if (error?.status === 401 && isApiUrl) {
           //handle refresh here
-          return throwError(() => error);
+          return this.refreshTokenMethod(request, next, loginResponse);
         } else {
           return throwError(() => error);
         }

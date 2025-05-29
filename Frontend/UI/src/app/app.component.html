@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar class="toolbar">
   <span>Task Tracker</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -11,5 +11,6 @@
 <router-outlet *ngIf="isStandalonePage"></router-outlet>
 
 <ng-container *ngIf="!isStandalonePage">
-    <p>Welcome to the main application!</p>
+    <router-outlet></router-outlet>
+    <!-- <app-task></app-task> -->
 </ng-container>
