@@ -90,7 +90,7 @@ namespace TDD.Web.Tests.Translators
             Assert.Multiple(() =>
             {
                 Assert.That(ex, Is.Not.Null);
-                Assert.That(ex?.ParamName, Is.EqualTo("refreshToken"));
+                Assert.That(ex?.ParamName, Is.EqualTo("viewModel"));
             });
         }
 
