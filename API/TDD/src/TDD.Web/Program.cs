@@ -11,6 +11,7 @@ using TDD.Web;
 using TDD.Shared.Options;
 using TDD.Infrastructure.Data.Entities;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -33,7 +34,9 @@ builder.Services.AddAuthentication(x =>
         ValidateActor = true,
         RequireExpirationTime = true,
         ValidateLifetime = true,
-        ValidateIssuerSigningKey = true
+        ValidateIssuerSigningKey = true,
+        NameClaimType = ClaimTypes.NameIdentifier,
+        RoleClaimType = ClaimTypes.Role
     };
 });
 

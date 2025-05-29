@@ -43,13 +43,7 @@ namespace TDD.Web.Providers
                 {
                     return null;
                 }
-
                 var applicationUser = await userService.GetUserAsync(httpContext.User);
-                if (applicationUser == null || !applicationUser.Active)
-                {
-                    // User not found or not active, return null  
-                    return null;
-                }
 
                 user = new UserModel
                 {

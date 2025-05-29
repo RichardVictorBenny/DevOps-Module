@@ -79,6 +79,7 @@ namespace TDD.BusinessLogic.Services
         {
             ArgumentNullException.ThrowIfNull(user);
             IEnumerable<Claim> _claims = new List<Claim> {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.UserName),
                 new Claim(ClaimTypes.Role, "User")
             };

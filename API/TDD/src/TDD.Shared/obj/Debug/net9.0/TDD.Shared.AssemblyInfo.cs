@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TDD.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e4e01b282963ef629aea2ba9e8ff6dcc2b99476")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c41552c302db78f48531fc0afd032b68decca238")]
 [assembly: System.Reflection.AssemblyProductAttribute("TDD.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TDD.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

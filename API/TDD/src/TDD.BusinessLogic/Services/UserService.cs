@@ -50,9 +50,11 @@ namespace TDD.BusinessLogic.Services
             return await userManager.UpdateAsync(user);
         }
 
-        public async Task<ApplicationUser?> GetUserAsync(ClaimsPrincipal user)
+        public async Task<ApplicationUser> GetUserAsync(ClaimsPrincipal user)
         {
-            return await userManager.GetUserAsync(user);
+            var result = await userManager.GetUserAsync(user);
+            if (result == null) throw new InvalidDataException("user is null");
+            return result;
         }
     }
 }

@@ -354,4 +354,3 @@ D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\refint\TDD.Web.dll
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.pdb
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\TDD.Web.genruntimeconfig.cache
 D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\ref\TDD.Web.dll
-D:\UNI\DevOps-Module\API\TDD\src\TDD.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

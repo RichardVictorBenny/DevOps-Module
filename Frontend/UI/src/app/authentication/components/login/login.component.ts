@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 import { FormService } from '../../../shared/services/form.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,12 @@ import { FormService } from '../../../shared/services/form.service';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private formService: FormService) {
+  constructor(
+    private fb: FormBuilder, 
+    private authService: AuthService, 
+    private formService: FormService,
+    private router: Router
+  ) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
@@ -32,6 +38,11 @@ export class LoginComponent {
         'Login successful!'
       ).subscribe(response => {
         console.log('Login response:', response);
+        localStorage.setItem('token', JSON.stringify(response));
+        this.authService.GetCurrentUser().subscribe(user => {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.router.navigate(['/'], { replaceUrl: true});
+        })
       });
     }
   }

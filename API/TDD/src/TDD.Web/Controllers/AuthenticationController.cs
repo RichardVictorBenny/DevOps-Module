@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TDD.Web.Translators.Interfaces;
 using TDD.Web.ViewModels;
@@ -42,7 +43,7 @@ namespace TDD.Web.Controllers
             return result;
         }
 
-        [HttpGet("CurrentUser")]
+        [Authorize, HttpGet("CurrentUser")]
         public async Task<IActionResult> GetCurrentUser()
         {
             var user = await translator.GetCurrentUser();
