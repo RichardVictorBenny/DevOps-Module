@@ -1,5 +1,3 @@
 export interface ModelStateErrors {
-  errors: {
-    [key: string]: string[]
-  }
+  errors: Record<string, string[]>
 }

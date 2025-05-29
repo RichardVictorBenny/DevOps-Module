@@ -130,7 +130,7 @@ export class FormService {
     }
 
     this.messageService.open(
-      message,
+      displayMessage,
       'x',
       {
         duration: 5000,
