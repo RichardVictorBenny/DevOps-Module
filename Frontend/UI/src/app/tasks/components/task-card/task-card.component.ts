@@ -5,6 +5,7 @@ import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task-card',
+  /* eslint-disable @angular-eslint/prefer-standalone */
   standalone: false,
   templateUrl: './task-card.component.html',
   styleUrl: './task-card.component.scss'
