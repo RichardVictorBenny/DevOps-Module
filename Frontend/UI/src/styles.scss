@@ -1,2 +1,43 @@
+@use '@angular/material' as mat;
+@use 'ngx-toastr/toastr' as toastr;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$orange-palette,
+    typography: Roboto,
+    density: 0
+  ));
+
+  .example-orange-primary-container {
+    @include mat.theme-overrides((
+      primary-container: #84ffff
+    ));
+  }
+}
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-snackbar-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.mat-snackbar-info {
+  background-color: #2196f3; 
+  color: #fff;
+}
+
+.mat-snackbar-warn {
+  background-color: #ff9800; 
+  color: #fff;
+}
+
+.mat-snackbar-error {
+  background-color: #f44336; 
+  color: #fff;
+}
+
+

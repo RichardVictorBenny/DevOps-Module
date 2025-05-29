@@ -50,7 +50,7 @@ builder.Services.AddCors(options =>
                 "https://localhost",
                 "http://localhost:4200",
                 "http://localhost"
-             ).AllowAnyHeader().AllowAnyMethod();
+             ).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
         });
 });
 

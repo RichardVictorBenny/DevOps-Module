@@ -6,4 +6,5 @@ export const routes: Routes = [
     {path: '', component: TaskListComponent},
 
     {path: 'login', component: LoginComponent},
+    {path: 'register', loadComponent: () => import('./authentication/components/register/register.component').then(m => m.RegisterComponent)},
 ];
