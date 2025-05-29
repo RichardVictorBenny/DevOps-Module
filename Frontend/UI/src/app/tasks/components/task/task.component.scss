@@ -1,0 +1,33 @@
+.task-form-card {
+    max-width: 50%;
+    margin: 1rem auto;
+}
+
+.task-form-fields {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.form-field {
+    width: 100%;
+}
+
+mat-card-header,
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+mat-card-header {
+    margin-bottom: 3rem;
+}
+
+mat-card-actions > button {
+    margin: 0 0.5rem;
+}

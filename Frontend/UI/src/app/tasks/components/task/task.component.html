@@ -1,15 +1,18 @@
-<form *ngIf="taskForm" class="task-form-card" [formGroup]="taskForm" (ngSubmit)="onSave()">
-  <mat-card>
+<form *ngIf="taskForm" class="task-form" [formGroup]="taskForm" (ngSubmit)="onSave()">
+  <mat-card class="task-form-card">
     <mat-card-header>
       <mat-card-title>Add New Task</mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
-      <div class="task-form">
+      <div class="task-form-fields">
         <!-- Title -->
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Title</mat-label>
           <input matInput formControlName="title" />
+          <mat-error *ngIf="taskForm.get('title')?.hasError('required')">
+            Title is required.
+          </mat-error>
         </mat-form-field>
 
         <!-- Description -->
@@ -40,12 +43,21 @@
 
     <mat-card-actions>
       <button
-        mat-raised-button
+        mat-flat-button
         color="primary"
         type="submit"
         [disabled]="!taskForm.valid"
       >
         Save Task
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="secondary"
+        (click)="createNew()"
+        [disabled]="!taskForm.valid"
+      >
+        Add New
       </button>
     </mat-card-actions>
   </mat-card>
