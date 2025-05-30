@@ -20,14 +20,6 @@ pipeline {
             }
         }
 
-        stage('Files') {
-            steps {
-                echo 'Checking for changes in the repository...'
-                sh 'pwd'
-                sh 'ls -la'
-            }
-        }
-
         stage('Frontend Lint & Test') {
             when {
                 changeset '**/Frontend/**'
@@ -46,7 +38,7 @@ pipeline {
             }
         }
 
-        stage('Backend Lint & Test') {
+        stage('Backend Test') {
             when {
                 changeset '**/API/**'
             }
@@ -54,8 +46,6 @@ pipeline {
                 dir('API/TDD') {
                     echo 'Restoring .NET dependencies...'
                     sh 'dotnet restore'
-                    echo 'Linting backend code (optional)...'
-                    // sh 'dotnet format  --verify-no-changes'
                     echo 'Building backend...'
                     sh 'dotnet build --no-restore'
                     echo 'Running backend tests...'
@@ -89,15 +79,21 @@ pipeline {
         }
 
                 stage('Archive Artifacts') {
-            steps {
-                dir('API/TDD') {
-                    archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
+                    when {
+                        anyOf {
+                            changeset '**/API/**'
+                            changeset '**/Frontend/**'
+                        }
+                    }
+                    steps {
+                        dir('API/TDD') {
+                            archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
+                        }
+                        dir('Frontend/UI/') {
+                            archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                        }
+                    }
                 }
-                dir('Frontend/UI/') {
-                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
-                }
-            }
-        }
 
         stage('Build & Push Backend Image') {
             when {
