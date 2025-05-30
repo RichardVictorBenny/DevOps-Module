@@ -6,7 +6,7 @@ export class Task {
   isHidden: boolean;
   dueDate: Date | null;
 
-  constructor(task?: Task) {
+  constructor(task?: Partial<Task>) {
     this.id = task?.id ?? null;
     this.title = task?.title ?? null;
     this.description = task?.description ?? null;

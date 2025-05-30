@@ -1,16 +1,124 @@
 import { TestBed } from '@angular/core/testing';
-
 import { AuthorizationInterceptor } from './authorization.interceptor';
+import { AuthService } from '../authentication/services/auth.service';
+import { Router } from '@angular/router';
+import { HttpRequest, HttpHandler, HttpEvent, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { of, throwError, Subject } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 describe('AuthorizationInterceptor', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    providers: [
-      AuthorizationInterceptor
+  let interceptor: AuthorizationInterceptor;
+  let authServiceMock: jest.Mocked<AuthService>;
+  let routerMock: jest.Mocked<Router>;
+  let httpHandlerMock: jest.Mocked<HttpHandler>;
+
+  beforeEach(() => {
+    authServiceMock = {
+      Token: '',
+      RefreshToken: jest.fn(),
+      GetCurrentUser: jest.fn()
+    } as any;
+
+    routerMock = {
+      navigateByUrl: jest.fn().mockResolvedValue(true)
+    } as any;
+
+    httpHandlerMock = {
+      handle: jest.fn()
+    };
+
+    TestBed.configureTestingModule({
+      providers: [
+        AuthorizationInterceptor,
+        { provide: AuthService, useValue: authServiceMock },
+        { provide: Router, useValue: routerMock }
       ]
-  }));
+    });
+
+    interceptor = TestBed.inject(AuthorizationInterceptor);
+  });
 
   it('should be created', () => {
-    const interceptor: AuthorizationInterceptor = TestBed.inject(AuthorizationInterceptor);
     expect(interceptor).toBeTruthy();
   });
+
+  it('should add Authorization header if token exists and request is to API', (done) => {
+    const loginResponse = { accessToken: 'token123', refreshToken: 'refresh123' };
+    authServiceMock.Token = JSON.stringify(loginResponse);
+
+    const request = new HttpRequest('GET', `${environment.apiUrl}/data`);
+    const nextHandle = new Subject<HttpEvent<any>>();
+    httpHandlerMock.handle.mockReturnValue(nextHandle.asObservable());
+
+    interceptor.intercept(request, httpHandlerMock).subscribe(event => {
+      expect(event).toBeTruthy();
+      done();
+    });
+
+    const interceptedRequest = httpHandlerMock.handle.mock.calls[0][0] as HttpRequest<any>;
+    expect(interceptedRequest.headers.get('Authorization')).toBe(`Bearer ${loginResponse.accessToken}`);
+
+    nextHandle.next(new HttpResponse({ status: 200 }));
+    nextHandle.complete();
+  });
+
+  it('should call refreshTokenMethod on 401 error and retry request after refresh', (done) => {
+    const loginResponse = { accessToken: 'old-token', refreshToken: 'refresh123' };
+    authServiceMock.Token = JSON.stringify(loginResponse);
+
+    const request = new HttpRequest('GET', `${environment.apiUrl}/data`);
+    const errorResponse = new HttpErrorResponse({ status: 401, url: request.url });
+
+    const refreshResponse = { accessToken: 'new-token', refreshToken: 'new-refresh' };
+    const refreshedUser = { UserId: 1, Email: 'user@example.com', FirstName: 'User', LastName: 'Test' };
+
+    // Setup RefreshToken to emit new token
+    const refreshSubject = new Subject<any>();
+    authServiceMock.RefreshToken.mockReturnValue(refreshSubject.asObservable());
+    authServiceMock.GetCurrentUser.mockReturnValue(of(refreshedUser));
+
+    // First handle returns 401 error
+    httpHandlerMock.handle.mockReturnValueOnce(throwError(() => errorResponse));
+    // Second handle returns success after refresh
+    httpHandlerMock.handle.mockReturnValueOnce(of(new HttpResponse({ status: 200 })));
+
+    interceptor.intercept(request, httpHandlerMock).subscribe({
+      next: (event) => {
+        expect(event).toBeTruthy();
+        expect(authServiceMock.Token).toBe(JSON.stringify(refreshResponse));
+        expect(authServiceMock.GetCurrentUser).toHaveBeenCalled();
+        done();
+      },
+      error: () => {
+        done.fail('Should not error');
+      }
+    });
+
+    // Trigger refresh token success
+    refreshSubject.next(refreshResponse);
+    refreshSubject.complete();
+
+    // Verify that handle was called twice (first error, then retry)
+    expect(httpHandlerMock.handle).toHaveBeenCalledTimes(2);
+  });
+
+  
+
+  it('should logout and redirect if no loginResponse when 401 received', (done) => {
+    authServiceMock.Token = null;
+
+    const request = new HttpRequest('GET', `${environment.apiUrl}/data`);
+    const errorResponse = new HttpErrorResponse({ status: 401, url: request.url });
+
+    httpHandlerMock.handle.mockReturnValueOnce(throwError(() => errorResponse));
+
+    interceptor.intercept(request, httpHandlerMock).subscribe({
+      next: () => done.fail('Expected error'),
+      error: (error) => {
+        expect(routerMock.navigateByUrl).toHaveBeenCalledWith('/login', { skipLocationChange: true });
+        done();
+      }
+    });
+  });
+
 });

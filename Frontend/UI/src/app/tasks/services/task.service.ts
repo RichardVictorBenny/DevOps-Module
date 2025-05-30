@@ -26,9 +26,9 @@ export class TaskService {
     return this.http.post<Task>(endpoint, task);
   }
 
-  public UpdateTask(task: Task): Observable<Task> {
+  public UpdateTask(task: Task): Observable<any> {
     const endpoint = `${environment.apiUrl}/Task/${task.id}`;
-    return this.http.put<Task>(endpoint, task);
+    return this.http.put<any>(endpoint, task);
   }
 
   public DeleteTask(id: string): Observable<void> {

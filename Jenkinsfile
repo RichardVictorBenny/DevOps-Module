@@ -37,7 +37,7 @@ pipeline {
                     sh 'npm run lint'
 
                     echo "Running frontend unit tests..."
-                    // sh 'npm test'
+                    sh 'npm run test'
                 }
             }
         }
@@ -84,16 +84,16 @@ pipeline {
             }
         }
 
-        // stage('Archive Artifacts') {
-        //     steps {
-        //         dir('backend') {
-        //             archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
-        //         }
-        //         dir('frontend') {
-        //             archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
-        //         }
-        //     }
-        // }
+        stage('Archive Artifacts') {
+            steps {
+                dir('API/TDD') {
+                    archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
+                }
+                dir('Frontend/UI/') {
+                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                }
+            }
+        }
 
         stage('Deploy') {
             steps {
