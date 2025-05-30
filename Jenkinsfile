@@ -107,7 +107,8 @@ pipeline {
         }
 
         stage('Deploy to Docker') {
-            script {
+            steps {
+                script {
                     def gitSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
                     def imageName = "richardbenny/devops-tca"
                     def versionTag = "${imageName}:${gitSha}"
@@ -120,6 +121,7 @@ pipeline {
 
                     sh "docker push ${latestTag}"
                 }
+            }
         }
     }
 
