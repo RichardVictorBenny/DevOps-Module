@@ -107,11 +107,19 @@ pipeline {
         }
 
         stage('Deploy to Docker') {
-            steps {
-                sh 'echo $DOCKER_CREDENTIALS_PSW'
-                sh 'docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW'
-                sh 'docker push richardbenny/devops-tca:latest'
-            }
+            script {
+                    def gitSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                    def imageName = "richardbenny/devops-tca"
+                    def versionTag = "${imageName}:${gitSha}"
+                    def latestTag = "${imageName}:latest"
+
+                    sh "docker build -t ${versionTag} -t ${latestTag} ."
+                    sh 'echo "$DOCKER_CREDENTIALS_PSW" | docker login -u "$DOCKER_CREDENTIALS_USR" --password-stdin'
+
+                    sh "docker push ${versionTag}"
+
+                    sh "docker push ${latestTag}"
+                }
         }
     }
 
