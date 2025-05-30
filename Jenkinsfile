@@ -90,16 +90,16 @@ pipeline {
             }
         }
 
-        stage('Archive Artifacts') {
-            steps {
-                dir('API/TDD') {
-                    archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
-                }
-                dir('Frontend/UI/') {
-                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
-                }
-            }
-        }
+        // stage('Archive Artifacts') {
+        //     steps {
+        //         dir('API/TDD') {
+        //             archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
+        //         }
+        //         dir('Frontend/UI/') {
+        //             archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+        //         }
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
