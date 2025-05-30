@@ -88,16 +88,6 @@ pipeline {
             }
         }
 
-        stage('Archive Artifacts') {
-            steps {
-                dir('API/TDD') {
-                    archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
-                }
-                dir('Frontend/UI/') {
-                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
-                }
-            }
-        }
 
         stage('Docker Build') {
             steps {
@@ -108,7 +98,7 @@ pipeline {
         stage('Deploy to Docker') {
             steps {
                 sh 'echo $DOCKER_CREDENTIALS_PSW'
-                sh 'docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW --password-stdin'
+                sh 'docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW'
                 sh 'docker push richardbenny/devops-tca:latest'
             }
         }
