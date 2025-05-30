@@ -1,16 +1,20 @@
 <mat-toolbar class="toolbar">
   <span>Task Tracker</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <span>{{ user?.FirstName }}</span>
+  <button
+    mat-icon-button
+    matTooltip="Logout"
+    aria-label="Logs out the current user"
+    type="button"
+    (click)="onLogout()"
+  >
+    <mat-icon>exit_to_app</mat-icon>
   </button>
 </mat-toolbar>
 <router-outlet *ngIf="isStandalonePage"></router-outlet>
 
 <ng-container *ngIf="!isStandalonePage">
-    <router-outlet></router-outlet>
-    <!-- <app-task></app-task> -->
+  <router-outlet></router-outlet>
+  <!-- <app-task></app-task> -->
 </ng-container>

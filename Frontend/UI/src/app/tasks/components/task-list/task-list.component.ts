@@ -34,7 +34,6 @@ export class TaskListComponent implements OnInit {
   public loadTasks(): void {
     this.taskService.GetTasks().subscribe(tasks => {
       this.taskList = tasks;
-      console.log('Tasks loaded:', this.taskList);
     });
   }
 

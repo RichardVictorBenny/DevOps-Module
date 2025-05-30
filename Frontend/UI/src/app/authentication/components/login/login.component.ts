@@ -31,13 +31,11 @@ export class LoginComponent {
   //@typescript-eslint/no-unused-vars
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Form Submitted!', this.loginForm.value);
       this.formService.Handle(
         this.authService.Login(this.loginForm.value),
         this.loginForm,
         'Login successful!'
       ).subscribe(response => {
-        console.log('Login response:', response);
         localStorage.setItem('token', JSON.stringify(response));
         this.authService.GetCurrentUser().subscribe(user => {
           localStorage.setItem('user', JSON.stringify(user));

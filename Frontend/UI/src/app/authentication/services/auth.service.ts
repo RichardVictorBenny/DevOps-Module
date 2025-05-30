@@ -4,13 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { LoginResponse, RefreshTokenBody, RegisterRequest, User } from '../models';
 import { Observable } from 'rxjs';
 import { LoginRequest } from '../models/login-request.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public get Token(): string | null {
     return localStorage.getItem('token');
@@ -57,5 +58,6 @@ export class AuthService {
   public Logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    this.router.navigate(['/login'], { replaceUrl: true });
   }
 }

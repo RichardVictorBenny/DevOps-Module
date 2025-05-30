@@ -1,5 +1,13 @@
-<form *ngIf="taskForm" class="task-form" [formGroup]="taskForm" (ngSubmit)="onSave()">
+<form
+  *ngIf="taskForm"
+  class="task-form"
+  [formGroup]="taskForm"
+  (ngSubmit)="onSave()"
+>
   <mat-card class="task-form-card">
+    <a routerLink="/tasks" class="back-link" routerLinkActive="active-link">
+      <mat-icon>arrow_back</mat-icon>
+    </a>
     <mat-card-header>
       <mat-card-title>Add New Task</mat-card-title>
     </mat-card-header>
@@ -18,26 +26,33 @@
         <!-- Description -->
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Description</mat-label>
-          <textarea matInput formControlName="description" ></textarea>
+          <textarea matInput formControlName="description"></textarea>
         </mat-form-field>
 
         <!-- Due Date -->
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Due Date</mat-label>
-          <input
-            matInput
-            [matDatepicker]="picker"
-            formControlName="dueDate"
-          />
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <input matInput [matDatepicker]="picker" formControlName="dueDate" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
         <!-- Favorite -->
-                <p><mat-slide-toggle formControlName="isFavorite">Mark as Favorite</mat-slide-toggle></p>
-    
-                <!-- Hidden -->
-                <p><mat-slide-toggle formControlName="isHidden">Mark as completed</mat-slide-toggle></p>
+        <p>
+          <mat-slide-toggle formControlName="isFavorite"
+            >Mark as Favorite</mat-slide-toggle
+          >
+        </p>
+
+        <!-- Hidden -->
+        <p>
+          <mat-slide-toggle formControlName="isHidden"
+            >Mark as completed</mat-slide-toggle
+          >
+        </p>
       </div>
     </mat-card-content>
 
