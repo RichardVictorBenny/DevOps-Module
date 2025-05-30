@@ -100,6 +100,9 @@ pipeline {
         }
 
         stage('Build & Push Backend Image') {
+            when {
+                changeset '**/API/**'
+            }
             steps {
                 script {
                     def apiImage = "richardbenny/devops-tca-api"
@@ -117,6 +120,9 @@ pipeline {
             }
         }
         stage('Build & Push Frontend Image') {
+            when {
+                changeset '**/Frontend/**'
+            }
             steps {
                 script {
                     def feImage = "richardbenny/devops-tca-frontend"

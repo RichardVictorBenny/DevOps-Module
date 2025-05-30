@@ -12,6 +12,7 @@ using TDD.Shared.Options;
 using TDD.Infrastructure.Data.Entities;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -87,6 +88,12 @@ builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DataContext>();
+    db.Database.Migrate();  
+}
 
 if (app.Environment.IsDevelopment())
 {
