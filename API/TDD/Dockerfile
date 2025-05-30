@@ -6,7 +6,7 @@ EXPOSE 8081
 
 # Build image
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
-ARG BUILD_CONFIGURATION=Debug
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copy everything into /src
@@ -20,7 +20,7 @@ RUN dotnet build "TDD.sln" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish the web project
 FROM build AS publish
-ARG BUILD_CONFIGURATION=Debug
+ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "TDD.sln" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Runtime image

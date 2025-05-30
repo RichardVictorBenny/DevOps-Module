@@ -31,6 +31,17 @@ services:
     networks:
       - sql_network
 
+  angular:
+    build:
+      context: ./Frontend/UI/
+      dockerfile: Dockerfile
+    container_name: angular
+    ports:
+      - "4200:80"
+    depends_on:
+      - api
+    networks:
+      - sql_network
 
 volumes:
   sql_data:

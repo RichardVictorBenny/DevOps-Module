@@ -5,9 +5,15 @@ pipeline {
         }
     }
 
+    environment {
+        DOCKER_CREDENTIALS = 'docker_hub'
+        IMAGE_NAME = 'devops-tca'
+        IMAGE_TAG = 'latest'
+    }
+
     triggers {
             pollSCM '*/5 * * * *'
-        }
+    }
 
     stages {
         stage('Checkout') {
@@ -16,27 +22,27 @@ pipeline {
             }
         }
 
-        stage('Files'){
+        stage('Files') {
             steps {
-                echo "Checking for changes in the repository..."
+                echo 'Checking for changes in the repository...'
                 sh 'pwd'
-                sh "ls -la"
+                sh 'ls -la'
             }
         }
 
         stage('Frontend Lint & Test') {
             when {
-                changeset "**/Frontend/**"
+                changeset '**/Frontend/**'
             }
             steps {
                 dir('Frontend/UI/') {
-                    echo "Installing frontend dependencies..."
+                    echo 'Installing frontend dependencies...'
                     sh 'npm ci'
 
-                    echo "Linting frontend..."
+                    echo 'Linting frontend...'
                     sh 'npm run lint'
 
-                    echo "Running frontend unit tests..."
+                    echo 'Running frontend unit tests...'
                     sh 'npm run test'
                 }
             }
@@ -44,17 +50,17 @@ pipeline {
 
         stage('Backend Lint & Test') {
             when {
-                changeset "**/API/**"
+                changeset '**/API/**'
             }
             steps {
                 dir('API/TDD') {
-                    echo "Restoring .NET dependencies..."
+                    echo 'Restoring .NET dependencies...'
                     sh 'dotnet restore'
-                    echo "Linting backend code (optional)..."
+                    echo 'Linting backend code (optional)...'
                     // sh 'dotnet format  --verify-no-changes'
-                    echo "Building backend..."
+                    echo 'Building backend...'
                     sh 'dotnet build --no-restore'
-                    echo "Running backend tests..."
+                    echo 'Running backend tests...'
                     sh 'dotnet test --no-build'
                 }
             }
@@ -62,23 +68,23 @@ pipeline {
 
         stage('Build Frontend') {
             when {
-                changeset "**/Frontend/**"
+                changeset '**/Frontend/**'
             }
             steps {
                 dir('Frontend/UI/') {
-                    echo "Building frontend..."
-                    sh 'npm run build'
+                    echo 'Building frontend...'
+                    sh 'npm run build:ssr'
                 }
             }
         }
 
         stage('Build Backend') {
             when {
-                changeset "**/API/**"
+                changeset '**/API/**'
             }
             steps {
                 dir('API/TDD') {
-                    echo "Rebuilding backend for deployment..."
+                    echo 'Rebuilding backend for deployment...'
                     sh 'dotnet publish -c Release -o ./publish'
                 }
             }
@@ -97,7 +103,17 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deploy here, using shell scripts or external jobs"
+                echo 'Deploying to Docker Hub'
+                scripts {
+                    withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS,
+                    usernameVariable: 'DOCKERHUB_USERNAME',
+                    passwordVariable: 'DOCKERHUB_PASSWORD')]) {
+                        sh "docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}"
+                        sh "docker build -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} ."
+                        sh "docker tag ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} index.docker.io/${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}"
+                        sh "docker push index.docker.io/${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    }
+                }
             }
         }
     }
