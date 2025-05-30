@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿// File: AuthenticationTranslator.cs
+// Author: Richard Benny
+// Purpose: Implements translation between authentication view models and business logic, handling registration, login, token refresh, and user retrieval.
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http.HttpResults;

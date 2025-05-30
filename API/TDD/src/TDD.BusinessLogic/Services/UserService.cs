@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+// File: TaskTranslator.cs
+// Author: Richard Benny
+// Purpose: Provides translation between TaskViewModel and TaskModel, and delegates task operations to the business logic service.
+
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

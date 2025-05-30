@@ -1,4 +1,8 @@
-﻿using System;
+﻿// File: IAuthService.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for authentication services, including user registration, login, and token generation.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

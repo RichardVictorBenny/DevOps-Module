@@ -1,3 +1,25 @@
+/*
+ * Jenkins Declarative Pipeline for Full Stack Application CI/CD
+ * 
+ * Author: Richard Benny - 22825546
+ * 
+ * This pipeline automates the continuous integration and delivery process for a full stack application
+ * consisting of a .NET backend (API) and a Node.js frontend (UI). It is designed to run on a Jenkins agent
+ * labeled 'docker-agent-docker9-node' and uses Docker for building and pushing images.
+ * 
+ * Key Features:
+ * - Polls the SCM every 5 minutes for changes.
+ * - Runs linting and unit tests for the frontend when changes are detected in the Frontend directory.
+ * - Restores, builds, and tests the backend when changes are detected in the API directory.
+ * - Builds production-ready frontend and backend artifacts.
+ * - Archives build artifacts for both frontend and backend.
+ * - Builds and pushes Docker images for both frontend and backend to Docker Hub, tagging with both the latest
+ *   Git commit SHA and 'latest'.
+ * - Uses Jenkins credentials for secure Docker Hub authentication.
+ * - Logs out from Docker after the pipeline completes.
+ * - Provides notifications on pipeline success or failure.
+ */
+
 pipeline {
     agent {
         node {

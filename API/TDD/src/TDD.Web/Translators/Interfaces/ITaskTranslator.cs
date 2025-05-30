@@ -1,4 +1,7 @@
-﻿using TDD.BusinessLogic.Models;
+﻿// File: ITaskTranslator.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for translating task operations between view models and business logic.
+using TDD.BusinessLogic.Models;
 using TDD.Web.ViewModels;
 
 namespace TDD.Web.Translators.Interfaces

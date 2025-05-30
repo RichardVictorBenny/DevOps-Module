@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿// File: AuthenticationTranslatorTests.cs
+// Author: Richard Benny
+// Purpose: Contains unit tests for the AuthenticationTranslator, verifying authentication and token translation logic.
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;

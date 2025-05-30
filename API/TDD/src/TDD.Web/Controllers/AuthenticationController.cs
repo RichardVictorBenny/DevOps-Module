@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿
+// File: ApplicationUserConfiguration.cs
+// Author: Richard Benny
+// Purpose: Configures the ApplicationUser entity for Entity Framework, including property constraints and relationships.
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TDD.Web.Translators.Interfaces;

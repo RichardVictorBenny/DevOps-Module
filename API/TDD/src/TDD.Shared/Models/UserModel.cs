@@ -1,4 +1,7 @@
-﻿using System;
+﻿// File: TaskModel.cs
+// Author: Richard Benny
+// Purpose: Represents the business logic model for a user's task.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

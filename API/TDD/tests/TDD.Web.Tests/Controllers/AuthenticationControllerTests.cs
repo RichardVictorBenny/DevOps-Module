@@ -1,4 +1,7 @@
-﻿using System;
+﻿// File: AuthenticationControllerTests.cs
+// Author: Richard Benny
+// Purpose: Contains unit tests for the AuthenticationController, verifying controller construction and dependency validation.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

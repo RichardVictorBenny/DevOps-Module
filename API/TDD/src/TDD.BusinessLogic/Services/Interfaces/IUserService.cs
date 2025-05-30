@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿// File: IAuthService.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for authentication services, including user registration, login, and token generation.
+
+using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using TDD.Infrastructure.Data.Entities;
 

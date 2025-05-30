@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+// File: IUserService.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for user management services, including user creation, password validation, retrieval, and updates.
+
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;

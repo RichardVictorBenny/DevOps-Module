@@ -1,3 +1,6 @@
+// File: Program.cs
+// Author: Richard Benny
+// Purpose: Configures and starts the ASP.NET Core web application, including authentication, services, middleware, and database migration.
 using Microsoft.AspNetCore.Identity;
 using TDD.BusinessLogic;
 using TDD.Infrastructure;

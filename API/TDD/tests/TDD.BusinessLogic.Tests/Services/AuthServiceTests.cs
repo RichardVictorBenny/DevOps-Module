@@ -1,4 +1,7 @@
-﻿using FluentAssertions;
+﻿// File: AuthServiceTests.cs
+// Author: Richard Benny
+// Purpose: Contains unit tests for the AuthService class, verifying authentication and token generation logic.
+using FluentAssertions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Moq;

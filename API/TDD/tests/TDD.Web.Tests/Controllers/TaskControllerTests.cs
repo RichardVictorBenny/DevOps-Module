@@ -1,4 +1,7 @@
-﻿using Moq;
+﻿// File: TaskControllerTests.cs
+// Author: Richard Benny
+// Purpose: Contains unit tests for the TaskController, verifying controller construction and dependency validation.
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;

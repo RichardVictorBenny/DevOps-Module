@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿// File: TaskTranslator.cs
+// Author: Richard Benny
+// Purpose: Provides translation between TaskViewModel and TaskModel, and delegates task operations to the business logic service.
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;

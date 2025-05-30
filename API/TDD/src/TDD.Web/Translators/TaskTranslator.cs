@@ -1,4 +1,7 @@
-﻿using TDD.BusinessLogic.Models;
+﻿// File: TaskTranslator.cs
+// Author: Richard Benny
+// Purpose: Implements translation between task view models and business logic models, delegating task operations to the business logic service.
+using TDD.BusinessLogic.Models;
 using TDD.BusinessLogic.Services.Interfaces;
 using TDD.Web.Translators.Interfaces;
 using TDD.Web.ViewModels;

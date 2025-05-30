@@ -1,4 +1,7 @@
-﻿using System;
+﻿// File: LoginModel.cs
+// Author: Richard Benny
+// Purpose: Represents the data model for user login credentials.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;

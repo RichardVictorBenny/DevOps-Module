@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication.BearerToken;
+﻿// File: IAuthenticationTranslator.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for translating authentication operations between view models and business logic.
+using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Http.HttpResults;
 using TDD.Web.ViewModels;
 

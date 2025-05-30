@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿// File: RegisterModel.cs
+// Author: Richard Benny
+// Purpose: Represents the data model for user registration information.
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;

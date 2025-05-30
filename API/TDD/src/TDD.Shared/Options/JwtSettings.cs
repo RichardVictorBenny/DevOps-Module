@@ -1,4 +1,7 @@
-﻿using System;
+﻿// File: JwtSettings.cs
+// Author: Richard Benny
+// Purpose: Represents configuration settings for JWT authentication, including key, issuer, and audience.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

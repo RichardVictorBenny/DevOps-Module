@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+// File: TaskViewModel.cs
+// Author: Richard Benny
+// Purpose: Represents the view model for displaying and editing task information in the web application.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;

@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿// File: TaskController.cs
+// Author: Richard Benny
+// Purpose: Provides API endpoints for managing user tasks, including creation, retrieval, update, and deletion.
+//
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TDD.Web.Translators.Interfaces;

@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
+﻿// File: UserProvider.cs
+// Author: Richard Benny
+// Purpose: Provides access to the current user's identity and profile information within the web application.
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using TDD.BusinessLogic.Services.Interfaces;
 using TDD.Shared.Models;
 using TDD.Shared.Providers;

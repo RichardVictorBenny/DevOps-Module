@@ -1,4 +1,6 @@
-﻿
+﻿// File: DependencyInjection.cs
+// Author: Richard Benny
+// Purpose: Registers web layer services and translators for dependency injection in the application.
 
 using System.Net.Security;
 using TDD.Shared.Options;

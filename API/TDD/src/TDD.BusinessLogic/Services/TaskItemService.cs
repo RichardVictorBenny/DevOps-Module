@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// File: TaskModel.cs
+// Author: Richard Benny
+// Purpose: Represents the business logic model for a user's task.
+
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// File: IUserProvider.cs
+// Author: Richard Benny
+// Purpose: Defines the contract for accessing the current user's identity and profile information.using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
