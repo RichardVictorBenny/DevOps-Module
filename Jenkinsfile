@@ -114,12 +114,10 @@ pipeline {
                     def versionTag = "${imageName}:${gitSha}"
                     def latestTag = "${imageName}:latest"
 
-                    sh "docker build -t ${versionTag} -t ${latestTag} ."
+                    sh "docker build -t ${versionTag} ."
                     sh 'echo "$DOCKER_CREDENTIALS_PSW" | docker login -u "$DOCKER_CREDENTIALS_USR" --password-stdin'
 
                     sh "docker push ${versionTag}"
-
-                    sh "docker push ${latestTag}"
                 }
             }
         }
