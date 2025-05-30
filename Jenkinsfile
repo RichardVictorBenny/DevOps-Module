@@ -1,7 +1,7 @@
 pipeline {
     agent {
-        node {
-            label 'docker-agent-docker9-node'
+        dockerfile {
+            filename 'Dockerfile'
         }
     }
 
