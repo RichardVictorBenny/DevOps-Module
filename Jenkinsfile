@@ -90,20 +90,19 @@ pipeline {
             }
         }
 
-        // stage('Archive Artifacts') {
-        //     steps {
-        //         dir('API/TDD') {
-        //             archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
-        //         }
-        //         dir('Frontend/UI/') {
-        //             archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
-        //         }
-        //     }
-        // }
-
-        stage('Deploy') {
+        stage('Archive Artifacts') {
             steps {
-                echo 'Deploying to Docker Hub'
+                dir('API/TDD') {
+                    archiveArtifacts artifacts: 'publish/**', allowEmptyArchive: true
+                }
+                dir('Frontend/UI/') {
+                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                }
+            }
+        }
+
+        stage('Deploy to Docker') {
+            steps {
                 scripts {
                     withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS,
                     usernameVariable: 'DOCKERHUB_USERNAME',
