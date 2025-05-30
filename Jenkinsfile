@@ -99,23 +99,41 @@ pipeline {
             }
         }
 
-        stage('Build and Deploy to Docker') {
+        stage('Build & Push Backend Image') {
             steps {
                 script {
+                    def apiImage = "richardbenny/devops-tca-api"
                     def gitSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-                    def imageName = "richardbenny/devops-tca"
-                    def versionTag = "${imageName}:${gitSha}"
-                    def latestTag = "${imageName}:latest"
+                    def versionTag = "${apiImage}:${gitSha}"
+                    def latestTag = "${apiImage}:latest"
 
-                    sh "docker build -t ${versionTag} -t ${latestTag} ."
-                    sh 'echo "$DOCKER_CREDENTIALS_PSW" | docker login -u "$DOCKER_CREDENTIALS_USR" --password-stdin'
-
-                    sh "docker push ${versionTag}"
-
-                    sh "docker push ${latestTag}"
+                    dir('API/TDD') {
+                        sh "docker build -t ${versionTag} -t ${latestTag} ."
+                        sh 'echo "$DOCKER_CREDENTIALS_PSW" | docker login -u "$DOCKER_CREDENTIALS_USR" --password-stdin'
+                        sh "docker push ${versionTag}"
+                        sh "docker push ${latestTag}"
+                    }
                 }
             }
         }
+        stage('Build & Push Frontend Image') {
+            steps {
+                script {
+                    def feImage = "richardbenny/devops-tca-frontend"
+                    def gitSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                    def versionTag = "${feImage}:${gitSha}"
+                    def latestTag = "${feImage}:latest"
+
+                    dir('Frontend/UI') {
+                        sh "docker build -t ${versionTag} -t ${latestTag} ."
+                        sh "docker push ${versionTag}"
+                        sh "docker push ${latestTag}"
+                    }
+                }
+            }
+        }
+
+
     }
 
     post {
