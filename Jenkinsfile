@@ -103,7 +103,7 @@ pipeline {
 
         stage('Deploy to Docker') {
             steps {
-                scripts {
+                script {
                     withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS,
                     usernameVariable: 'DOCKERHUB_USERNAME',
                     passwordVariable: 'DOCKERHUB_PASSWORD')]) {
