@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   let mockAuthService: any;
   let mockFormService: any;
   let mockRouter: any;

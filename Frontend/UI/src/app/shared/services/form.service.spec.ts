@@ -2,9 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { FormService } from './form.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { of, throwError } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
-import { ModelStateErrors } from '../models/model-state-errors.model';
+import { of } from 'rxjs';
 
 describe('FormService', () => {
   let service: FormService;

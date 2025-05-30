@@ -12,6 +12,7 @@ describe('AuthorizationInterceptor', () => {
   let routerMock: jest.Mocked<Router>;
   let httpHandlerMock: jest.Mocked<HttpHandler>;
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
   beforeEach(() => {
     authServiceMock = {
       Token: '',
@@ -114,7 +115,7 @@ describe('AuthorizationInterceptor', () => {
 
     interceptor.intercept(request, httpHandlerMock).subscribe({
       next: () => done.fail('Expected error'),
-      error: (error) => {
+      error: () => {
         expect(routerMock.navigateByUrl).toHaveBeenCalledWith('/login', { skipLocationChange: true });
         done();
       }

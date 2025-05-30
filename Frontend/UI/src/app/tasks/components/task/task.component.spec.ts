@@ -8,6 +8,7 @@ import { of } from 'rxjs';
 import { Task } from '../../models/task.model';
 import { MatModule } from '../../../shared/modules/mat.module';
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
 describe('TaskComponent', () => {
   let component: TaskComponent;
   let fixture: ComponentFixture<TaskComponent>;

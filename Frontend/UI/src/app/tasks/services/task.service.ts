@@ -25,7 +25,8 @@ export class TaskService {
     const endpoint = `${environment.apiUrl}/Task`;
     return this.http.post<Task>(endpoint, task);
   }
-
+  
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   public UpdateTask(task: Task): Observable<any> {
     const endpoint = `${environment.apiUrl}/Task/${task.id}`;
     return this.http.put<any>(endpoint, task);

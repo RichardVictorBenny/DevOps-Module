@@ -10,7 +10,7 @@ describe('TaskCardComponent', () => {
   let fixture: ComponentFixture<TaskCardComponent>;
   let taskServiceMock: jest.Mocked<TaskService>;
   let formServiceMock: jest.Mocked<FormService>;
-
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   beforeEach(async () => {
     taskServiceMock = {
       UpdateTask: jest.fn(),

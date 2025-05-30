@@ -9,6 +9,7 @@ import { LoginResponse, RegisterRequest, RefreshTokenBody, User } from '../model
 describe('AuthService', () => {
   let service: AuthService;
   let httpMock: HttpTestingController;
+    /* eslint-disable @typescript-eslint/no-explicit-any */
   let mockRouter: any;
 
   beforeEach(() => {
