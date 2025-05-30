@@ -38,4 +38,4 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /
 # Verify installations (optional)
 RUN dotnet --version && node --version && npm --version
 
-USER jenkins
+USER root

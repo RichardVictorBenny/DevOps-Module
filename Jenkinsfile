@@ -117,7 +117,6 @@ pipeline {
     post {
         always {
             sh 'docker logout'
-            junit '**/TestResults/*.xml' // Only if you export test results in XML
         }
         success {
             echo 'CI pipeline passed'
