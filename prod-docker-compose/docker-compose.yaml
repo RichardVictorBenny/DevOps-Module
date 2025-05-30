@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  sqlServer:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_prod
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=STRONG@password91
+    ports:
+      - "1433:1433"
+    networks:
+      - sql_network
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  api:
+    image: richardbenny/devops-tca-api:latest
+    container_name: sql_api_prod
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__sqlDatabase=Server=sql_server_prod;Database=TDD;User Id=sa;Password=STRONG@password91;TrustServerCertificate=True;MultipleActiveResultSets=True;
+    ports:
+      - "5000:8080"
+    depends_on:
+      - sqlServer
+    networks:
+      - sql_network
+
+  angular:
+    image: richardbenny/devops-tca-frontend:latest
+    container_name: angular_prod
+    ports:
+      - "4200:80"
+    depends_on:
+      - api
+    networks:
+      - sql_network
+
+volumes:
+  sql_data:
+    driver: local
+
+networks:
+  sql_network:
+    driver: bridge
