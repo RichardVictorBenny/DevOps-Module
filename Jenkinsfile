@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_CREDENTIALS = 'docker_hub'
+        DOCKER_CREDENTIALS = credentials('docker_hub')
         IMAGE_NAME = 'devops-tca'
         IMAGE_TAG = 'latest'
     }
