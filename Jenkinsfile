@@ -99,14 +99,7 @@ pipeline {
             }
         }
 
-
-        stage('Docker Build') {
-            steps {
-                sh 'docker build -t richardbenny/devops-tca:latest .'
-            }
-        }
-
-        stage('Deploy to Docker') {
+        stage('Build and Deploy to Docker') {
             steps {
                 script {
                     def gitSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
@@ -114,10 +107,12 @@ pipeline {
                     def versionTag = "${imageName}:${gitSha}"
                     def latestTag = "${imageName}:latest"
 
-                    sh "docker build -t ${versionTag} ."
+                    sh "docker build -t ${versionTag} -t ${latestTag} ."
                     sh 'echo "$DOCKER_CREDENTIALS_PSW" | docker login -u "$DOCKER_CREDENTIALS_USR" --password-stdin'
 
                     sh "docker push ${versionTag}"
+
+                    sh "docker push ${latestTag}"
                 }
             }
         }
