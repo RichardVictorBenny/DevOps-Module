@@ -1,3 +1,16 @@
+/**
+ * File: authorization.interceptor.spec.ts
+ * Author: Richard Benny
+ * Purpose: Unit tests for the AuthorizationInterceptor, which handles adding authorization headers,
+ *          refreshing tokens on 401 errors, and redirecting to login when unauthorized.
+ * Dependencies: Angular TestBed, Jest, RxJS, Angular Router, HttpClient, AuthService, environment
+ *
+ * This test suite verifies:
+ * - The interceptor is created successfully.
+ * - It adds an Authorization header to API requests when a token exists.
+ * - It attempts to refresh the token and retries the request on a 401 Unauthorized error.
+ * - It logs out and redirects to the login page if no token is present when a 401 occurs.
+ */
 import { TestBed } from '@angular/core/testing';
 import { AuthorizationInterceptor } from './authorization.interceptor';
 import { AuthService } from '../authentication/services/auth.service';

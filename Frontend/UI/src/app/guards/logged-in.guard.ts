@@ -1,3 +1,13 @@
+/**
+ * File: logged-in.guard.ts
+ * Author: Richard Benny
+ * Purpose: Defines a route guard to check if the user is authenticated before allowing access to certain routes.
+ * Dependencies: @angular/core, @angular/router, ../authentication/services/auth.service
+ *
+ * This guard uses the AuthService to determine if a user is authenticated.
+ * If authenticated, navigation proceeds. Otherwise, the user is redirected to the login page.
+ */
+
 import { inject } from '@angular/core';
 import { Router, CanActivateFn } from '@angular/router';
 import { AuthService } from '../authentication/services/auth.service';

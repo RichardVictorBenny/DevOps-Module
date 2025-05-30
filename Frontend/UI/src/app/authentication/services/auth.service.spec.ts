@@ -1,3 +1,13 @@
+/**
+ * File: auth.service.spec.ts
+ * Author: Richard Benny
+ * Purpose: Unit tests for the AuthService in the authentication module.
+ * Dependencies: Angular TestBed, HttpClientTestingModule, Jest, Angular Router, environment, authentication models.
+ *
+ * This file contains a comprehensive suite of unit tests for the AuthService, verifying authentication logic such as token management,
+ * login, registration, token refresh, user retrieval, and logout functionality. The tests use Angular's testing utilities and mock HTTP requests
+ * to ensure the AuthService behaves as expected without requiring a real backend.
+ */
 import { TestBed } from '@angular/core/testing';
 import { AuthService } from './auth.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';

@@ -99,6 +99,19 @@ describe('TaskComponent', () => {
   });
 
   it('should update a task and not navigate', () => {
+    /**
+     * @file task.component.spec.ts
+     * @author Richard Benny
+     * @purpose This file contains unit tests for the TaskComponent in the Angular application.
+     * It verifies the correct behavior of task-related functionalities, such as updating task properties.
+     * 
+     * @dependencies
+     * - Angular testing utilities
+     * - Task model
+     * 
+     * The test involving `updatedTask` ensures that the component correctly handles updates to a task's properties,
+     * such as title, description, due date, and visibility flags.
+     */
     const updatedTask : Task = {
       id: "42",
       title: 'Updated',

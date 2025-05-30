@@ -4,6 +4,12 @@ import { Observable } from 'rxjs';
 import { Task } from '../models/task.model';
 import { environment } from '../../../environments/environment';
 
+/**
+ * @file task.service.ts
+ * @author Richard Benny
+ * @purpose Provides CRUD operations for Task entities by communicating with the backend API.
+ * @dependencies Angular HttpClient, environment configuration, Task model
+ */
 @Injectable({
   providedIn: 'root'
 })

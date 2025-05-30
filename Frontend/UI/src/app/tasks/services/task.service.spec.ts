@@ -1,3 +1,14 @@
+/**
+ * File: task.service.spec.ts
+ * Author: Richard Benny
+ * Purpose: Unit tests for TaskService, which handles HTTP operations for Task entities.
+ * Dependencies: Angular TestBed, HttpClientTestingModule, HttpTestingController, Task model, environment config.
+ *
+ * This file contains a suite of unit tests for the TaskService in an Angular application.
+ * The tests verify that the service correctly performs CRUD operations (GET, POST, PUT, DELETE)
+ * against the backend API, using mocked HTTP requests. Each test checks that the correct HTTP
+ * method, URL, and request body are used, and that the service returns the expected data.
+ */
 import { TestBed } from '@angular/core/testing';
 import { TaskService } from './task.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';

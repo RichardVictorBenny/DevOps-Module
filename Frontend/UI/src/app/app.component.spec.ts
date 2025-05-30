@@ -6,6 +6,12 @@ import { AuthService } from './authentication/services/auth.service';
 import { of } from 'rxjs';
 
 // Mock services
+/**
+ * @fileoverview Provides a mock implementation of the LayoutService for testing purposes.
+ * @author Richard Benny
+ * @purpose Used to simulate the LayoutService in unit tests, allowing control over the `isStandalonePage` observable.
+ * @dependencies rxjs/of
+ */
 const mockLayoutService = {
   isStandalonePage: of(false),
 };

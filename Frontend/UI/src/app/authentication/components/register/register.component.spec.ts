@@ -1,3 +1,13 @@
+/**
+ * File: register.component.spec.ts
+ * Author: Richard Benny
+ * Purpose: Unit tests for the RegisterComponent in the authentication module.
+ * Dependencies: Angular testing utilities, ReactiveFormsModule, FormsModule, Router, Jest, RxJS, MatModule, AuthService, FormService.
+ *
+ * This test suite verifies:
+ * - The RegisterComponent is created successfully.
+ * - On valid form submission, FormService.Handle is called with the correct arguments and the router navigates to the login page.
+ */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';

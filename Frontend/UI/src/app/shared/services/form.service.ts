@@ -5,6 +5,23 @@ import { Observable, throwError } from 'rxjs';
 import { ModelStateErrors } from '../models/model-state-errors.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+/**
+ * @file form.service.ts
+ * @author Richard Benny
+ * @purpose Provides utility methods for handling Angular forms, including validation, error handling, and user notifications using Angular Material's MatSnackBar.
+ * @dependencies
+ *  - @angular/forms (NgForm, FormGroup)
+ *  - @angular/material/snack-bar (MatSnackBar)
+ *  - rxjs (Observable, throwError)
+ *  - @angular/common/http (HttpErrorResponse)
+ *
+ * This service centralizes form submission logic, including:
+ *  - Validating forms before submission.
+ *  - Marking controls as touched to trigger validation messages.
+ *  - Handling HTTP errors and mapping server-side validation errors to form controls.
+ *  - Displaying success, info, warning, and error messages via snackbars.
+ *  - Resetting form state after successful operations.
+ */
 @Injectable({
   providedIn: 'root'
 })

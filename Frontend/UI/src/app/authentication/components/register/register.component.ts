@@ -1,3 +1,10 @@
+/**
+ * File: register.component.ts
+ * Author: Richard Benny
+ * Purpose: Implements the user registration form component, handling form validation and submission logic.
+ * Dependencies: Angular Forms, Angular Router, AuthService, FormService, MatModule, CommonModule
+ */
+
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -29,6 +36,12 @@ export class RegisterComponent {
     });
   }
 
+  /**
+   * Handles form submission.
+   * If the form is valid, it calls the AuthService to register the user.
+   * The FormService handles the observable and displays a success message.
+   * On successful registration, navigates to the login page.
+   */
   onSubmit() {
     if (this.registerForm.valid) {
       this.formService.Handle(this.authService.Register(this.registerForm.value),

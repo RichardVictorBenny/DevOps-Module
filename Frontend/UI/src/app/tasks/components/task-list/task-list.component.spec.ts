@@ -1,3 +1,4 @@
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TaskListComponent } from './task-list.component';
 import { TaskService } from '../../services/task.service';
@@ -12,6 +13,18 @@ describe('TaskListComponent', () => {
   let taskServiceMock: Partial<jest.Mocked<TaskService>>;
   let routerMock: Partial<jest.Mocked<Router>>;
 
+  /**
+   * @fileoverview Contains mock task data for testing the TaskListComponent.
+   * @author Richard Benny
+   * @purpose Provides a set of sample Task objects to facilitate unit testing of task list rendering, filtering, and state management.
+   * @dependencies Task (model/interface)
+   *
+   * The mockTasks array simulates various task states:
+   * - A favorite task
+   * - A regular (non-favorite, visible) task
+   * - A completed (hidden) task
+   * This allows comprehensive testing of component logic that handles favorites, visibility, and task display.
+   */
   const mockTasks: Task[] = [
     { id: '1', title: 'Fav Task', description: null, isFavorite: true, isHidden: false, dueDate: null },
     { id: '2', title: 'Regular Task', description: null, isFavorite: false, isHidden: false, dueDate: null },

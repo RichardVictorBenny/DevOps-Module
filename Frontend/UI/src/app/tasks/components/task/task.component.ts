@@ -5,6 +5,26 @@ import { FormService } from '../../../shared/services/form.service';
 import { Task } from '../../models/task.model';
 import { TaskService } from '../../services/task.service';
 
+/**
+ * @file task.component.ts
+ * @author Richard Benny
+ * @purpose Defines the TaskComponent, which is responsible for displaying, creating, and editing tasks in the application.
+ * @dependencies
+ * - @angular/core: For Angular component and lifecycle hooks.
+ * - @angular/forms: For reactive form handling.
+ * - @angular/router: For navigation and route parameter handling.
+ * - TaskService: Custom service for task data operations.
+ * - FormService: Custom service for form submission handling.
+ *
+ * @description
+ * This file implements the TaskComponent, an Angular component that manages the UI and logic for viewing, creating, and updating tasks.
+ * It uses Angular's reactive forms to bind task data to the form, and interacts with TaskService to fetch, create, or update tasks based on route parameters.
+ * The component also handles navigation after task creation or update.
+ *
+ * @remarks
+ * The component checks for a task ID in the route parameters to determine whether to load an existing task or initialize a new one.
+ * It provides form validation, submission handling, and user feedback upon successful operations.
+ */
 @Component({
   selector: 'app-task',
   /* eslint-disable @angular-eslint/prefer-standalone */

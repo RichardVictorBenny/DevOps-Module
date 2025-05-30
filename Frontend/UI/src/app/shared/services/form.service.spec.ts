@@ -4,6 +4,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { of } from 'rxjs';
 
+/**
+ * @file form.service.spec.ts
+ * @author Richard Benny
+ * @purpose Unit test for form-related functionality in the shared FormService.
+ * @dependencies Angular's FormGroup, FormControl, and Validators.
+ *
+ * This test initializes a FormGroup with a single 'name' FormControl,
+ * pre-populated with the value 'Test' and marked as required using Angular's Validators.
+ * The test is designed to verify that the form control is correctly set up and validates as expected.
+ */
 describe('FormService', () => {
   let service: FormService;
   let snackBarSpy: jest.Mocked<MatSnackBar>;

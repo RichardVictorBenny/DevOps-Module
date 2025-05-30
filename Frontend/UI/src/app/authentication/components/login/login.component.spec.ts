@@ -10,6 +10,12 @@ import { CommonModule } from '@angular/common';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
+  /**
+   * @file login.component.spec.ts
+   * @author Richard Benny
+   * @purpose Contains unit tests for the LoginComponent in the authentication module.
+   * @dependencies Angular testing utilities, LoginComponent
+   */
   let fixture: ComponentFixture<LoginComponent>;
   /* eslint-disable @typescript-eslint/no-explicit-any */
   let mockAuthService: any;

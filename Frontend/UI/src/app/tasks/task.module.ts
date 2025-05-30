@@ -9,6 +9,12 @@ import { TaskCardComponent } from './components/task-card/task-card.component';
 
 
 
+/**
+ * @file task.module.ts
+ * @author Richard Benny
+ * @purpose Defines the TaskModule, which encapsulates components and dependencies related to task management features.
+ * @dependencies MatModule, CommonModule, TaskRoutingModule, ReactiveFormsModule, FormsModule
+ */
 @NgModule({
   declarations: [
     TaskListComponent,

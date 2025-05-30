@@ -1,3 +1,9 @@
+/**
+ * File: authorization.interceptor.ts
+ * Author: Richard Benny
+ * Purpose: HTTP interceptor for handling authorization and token refresh logic in Angular app.
+ * Dependencies: Angular core, Angular HTTP, RxJS, AuthService, environment, Router
+ */
 import { Injectable } from '@angular/core';
 import {
   HttpRequest,

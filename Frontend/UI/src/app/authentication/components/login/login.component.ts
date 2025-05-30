@@ -6,6 +6,12 @@ import { AuthService } from '../../services/auth.service';
 import { FormService } from '../../../shared/services/form.service';
 import { Router } from '@angular/router';
 
+/**
+ * @file login.component.ts
+ * @author Richard Benny
+ * @purpose Implements the login functionality for the application, including form validation, authentication, and navigation.
+ * @dependencies MatModule, FormsModule, ReactiveFormsModule, CommonModule, FormBuilder, AuthService, FormService, Router
+ */
 @Component({
   selector: 'app-login',
   imports: [MatModule, FormsModule, ReactiveFormsModule, CommonModule ],

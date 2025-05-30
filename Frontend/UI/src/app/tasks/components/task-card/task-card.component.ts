@@ -1,3 +1,13 @@
+/**
+ * File: task-card.component.ts
+ * Author: Richard Benny
+ * Purpose: Angular component for displaying and managing a list of tasks, including marking as favorite, completing, and deleting tasks.
+ * Dependencies:
+ *  - @angular/core: For component and event handling.
+ *  - FormService: Shared service for handling form-related operations.
+ *  - Task: Task model definition.
+ *  - TaskService: Service for CRUD operations on tasks.
+ */
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormService } from '../../../shared/services/form.service';
 import { Task } from '../../models/task.model';

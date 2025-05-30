@@ -1,3 +1,9 @@
+/**
+ * File: task-list.component.ts
+ * Author: Richard Benny
+ * Purpose: Angular component for displaying and managing a list of tasks, including favorites, regular, and completed tasks.
+ * Dependencies: Angular core, Angular forms, Angular router, Task model, Task service.
+ */
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Task } from '../../models/task.model';

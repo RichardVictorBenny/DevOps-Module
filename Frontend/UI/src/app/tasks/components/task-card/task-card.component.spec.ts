@@ -1,3 +1,19 @@
+/**
+ * File: task-card.component.spec.ts
+ * Author: Richard Benny
+ * Purpose:
+ *   This file contains unit tests for the TaskCardComponent in an Angular application.
+ *   The tests verify the component's behavior for toggling favorite status, marking tasks as completed,
+ *   and deleting tasks. Mock services are used to isolate the component logic and ensure correct
+ *   interactions with TaskService and FormService dependencies.
+ * Dependencies:
+ *   - Angular testing utilities
+ *   - TaskCardComponent
+ *   - TaskService (mocked)
+ *   - FormService (mocked)
+ *   - RxJS (for observables)
+ *   - MatModule (Angular Material module)
+ */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TaskCardComponent } from './task-card.component';
 import { TaskService } from '../../services/task.service';

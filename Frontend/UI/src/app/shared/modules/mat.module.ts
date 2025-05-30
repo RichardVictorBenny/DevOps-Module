@@ -1,3 +1,8 @@
+// File: mat.module.ts
+// Author: Richard Benny
+// Purpose: Angular module to centralize and re-export commonly used Angular Material modules for easy import across the application.
+// Dependencies: @angular/core, @angular/material/*
+
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';

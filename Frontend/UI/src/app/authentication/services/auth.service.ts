@@ -1,3 +1,10 @@
+
+/**
+ * File: auth.service.ts
+ * Author: Richard Benny
+ * Purpose: Provides authentication-related services such as login, registration, token management, and user session handling for the Angular frontend.
+ * Dependencies: Angular core, Angular HTTP client, Angular router, environment configuration, authentication models (LoginRequest, LoginResponse, RegisterRequest, User, RefreshTokenBody), RxJS Observable.
+ */
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
